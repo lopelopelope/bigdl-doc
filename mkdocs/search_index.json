@@ -1,0 +1,69 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Welcome to BigDL Docs\n\n\nFor full documentation visit \nBigDL wiki\n.\n\n\nBigDL Documentation\n\n\nSetup instructions, programming guides, and other documentation are available for each stable version of BigDL below:\n\n\nBigDL 0.1.1\n\n\nBigDL 0.1.0",
+            "title": "Home"
+        },
+        {
+            "location": "/#welcome-to-bigdl-docs",
+            "text": "For full documentation visit  BigDL wiki .",
+            "title": "Welcome to BigDL Docs"
+        },
+        {
+            "location": "/#bigdl-documentation",
+            "text": "Setup instructions, programming guides, and other documentation are available for each stable version of BigDL below:  BigDL 0.1.1  BigDL 0.1.0",
+            "title": "BigDL Documentation"
+        },
+        {
+            "location": "/Overview/",
+            "text": "What is BigDL?\n\n\nBigDL is a distributed deep learning library for Apache Spark; with BigDL, users can write their deep learning applications as standard Spark programs, which can directly run on top of existing Spark or Hadoop clusters.\n* \nRich deep learning support.\n Modeled after \nTorch\n, BigDL provides comprehensive support for deep learning, including numeric computing (via \nTensor\n) and high level \nneural networks\n; in addition, users can load pre-trained \nCaffe\n or \nTorch\n models into Spark programs using BigDL.\n\n\n\n\n\n\nExtremely high performance.\n To achieve high performance, BigDL uses \nIntel MKL\n and multi-threaded programming in each Spark task. Consequently, it is orders of magnitude faster than out-of-box open source \nCaffe\n, \nTorch\n or \nTensorFlow\n on a single-node Xeon (i.e., comparable with mainstream GPU).\n\n\n\n\n\n\nEfficiently scale-out.\n BigDL can efficiently scale out to perform data analytics at \"Big Data scale\", by leveraging \nApache Spark\n (a lightning fast distributed data processing framework), as well as efficient implementations of synchronous SGD and all-reduce communications on Spark. \n\n\n\n\n\n\nWhy BigDL?\n\n\nYou may want to write your deep learning programs using BigDL if:\n* You want to analyze a large amount of data on the same Big Data (Hadoop/Spark) cluster where the data are stored (in, say, HDFS, HBase, Hive, etc.).\n\n\n\n\n\n\nYou want to add deep learning functionalities (either training or prediction) to your Big Data (Spark) programs and/or workflow.\n\n\n\n\n\n\nYou want to leverage existing Hadoop/Spark clusters to run your deep learning applications, which can be then dynamically shared with other workloads (e.g., ETL, data warehouse, feature engineering, classical machine learning, graph analytics, etc.)\n\n\n\n\n\n\nHow to use BigDL?\n\n\n\n\nTo learn how to install and build BigDL (on both Linux and macOS), you can check out the \nBuild Page\n\n\nTo learn how to run BigDL programs (as either a local Java program or a Spark program), you can check out the \nGetting Started Page\n\n\nTo learn the details of Python support in BigDL, you can check out the \nPython Support Page\n\n\nTo try BigDL out on EC2, you can check out the \nRunning on EC2 Page\n\n\nTo learn how to create practical neural networks using BigDL in a couple of minutes, you can check out the \nTutorials Page\n\n\nFor more details, you can check out the \nDocuments Page\n (including Tutorials, Examples, Programming Guide, etc.)\n\n\n\n\nSupport\n\n\n\n\nYou can join the \nBigDL Google Group\n (or subscribe to the \nMail List\n) for more questions and discussions on BigDL\n\n\nYou can post bug reports and feature requests at the \nIssue Page",
+            "title": "Overview"
+        },
+        {
+            "location": "/Overview/#what-is-bigdl",
+            "text": "BigDL is a distributed deep learning library for Apache Spark; with BigDL, users can write their deep learning applications as standard Spark programs, which can directly run on top of existing Spark or Hadoop clusters.\n*  Rich deep learning support.  Modeled after  Torch , BigDL provides comprehensive support for deep learning, including numeric computing (via  Tensor ) and high level  neural networks ; in addition, users can load pre-trained  Caffe  or  Torch  models into Spark programs using BigDL.    Extremely high performance.  To achieve high performance, BigDL uses  Intel MKL  and multi-threaded programming in each Spark task. Consequently, it is orders of magnitude faster than out-of-box open source  Caffe ,  Torch  or  TensorFlow  on a single-node Xeon (i.e., comparable with mainstream GPU).    Efficiently scale-out.  BigDL can efficiently scale out to perform data analytics at \"Big Data scale\", by leveraging  Apache Spark  (a lightning fast distributed data processing framework), as well as efficient implementations of synchronous SGD and all-reduce communications on Spark.",
+            "title": "What is BigDL?"
+        },
+        {
+            "location": "/Overview/#why-bigdl",
+            "text": "You may want to write your deep learning programs using BigDL if:\n* You want to analyze a large amount of data on the same Big Data (Hadoop/Spark) cluster where the data are stored (in, say, HDFS, HBase, Hive, etc.).    You want to add deep learning functionalities (either training or prediction) to your Big Data (Spark) programs and/or workflow.    You want to leverage existing Hadoop/Spark clusters to run your deep learning applications, which can be then dynamically shared with other workloads (e.g., ETL, data warehouse, feature engineering, classical machine learning, graph analytics, etc.)",
+            "title": "Why BigDL?"
+        },
+        {
+            "location": "/Overview/#how-to-use-bigdl",
+            "text": "To learn how to install and build BigDL (on both Linux and macOS), you can check out the  Build Page  To learn how to run BigDL programs (as either a local Java program or a Spark program), you can check out the  Getting Started Page  To learn the details of Python support in BigDL, you can check out the  Python Support Page  To try BigDL out on EC2, you can check out the  Running on EC2 Page  To learn how to create practical neural networks using BigDL in a couple of minutes, you can check out the  Tutorials Page  For more details, you can check out the  Documents Page  (including Tutorials, Examples, Programming Guide, etc.)",
+            "title": "How to use BigDL?"
+        },
+        {
+            "location": "/Overview/#support",
+            "text": "You can join the  BigDL Google Group  (or subscribe to the  Mail List ) for more questions and discussions on BigDL  You can post bug reports and feature requests at the  Issue Page",
+            "title": "Support"
+        },
+        {
+            "location": "/about/",
+            "text": "What is BigDL?\n\n\nBigDL is a distributed deep learning library for Apache Spark; with BigDL, users can write their deep learning applications as standard Spark programs, which can directly run on top of existing Spark or Hadoop clusters.\n* \nRich deep learning support.\n Modeled after \nTorch\n, BigDL provides comprehensive support for deep learning, including numeric computing (via \nTensor\n) and high level \nneural networks\n; in addition, users can load pre-trained \nCaffe\n or \nTorch\n models into Spark programs using BigDL.\n\n\n\n\n\n\nExtremely high performance.\n To achieve high performance, BigDL uses \nIntel MKL\n and multi-threaded programming in each Spark task. Consequently, it is orders of magnitude faster than out-of-box open source \nCaffe\n, \nTorch\n or \nTensorFlow\n on a single-node Xeon (i.e., comparable with mainstream GPU).\n\n\n\n\n\n\nEfficiently scale-out.\n BigDL can efficiently scale out to perform data analytics at \"Big Data scale\", by leveraging \nApache Spark\n (a lightning fast distributed data processing framework), as well as efficient implementations of synchronous SGD and all-reduce communications on Spark. \n\n\n\n\n\n\nWhy BigDL?\n\n\nYou may want to write your deep learning programs using BigDL if:\n* You want to analyze a large amount of data on the same Big Data (Hadoop/Spark) cluster where the data are stored (in, say, HDFS, HBase, Hive, etc.).\n\n\n\n\n\n\nYou want to add deep learning functionalities (either training or prediction) to your Big Data (Spark) programs and/or workflow.\n\n\n\n\n\n\nYou want to leverage existing Hadoop/Spark clusters to run your deep learning applications, which can be then dynamically shared with other workloads (e.g., ETL, data warehouse, feature engineering, classical machine learning, graph analytics, etc.)\n\n\n\n\n\n\nHow to use BigDL?\n\n\n\n\nTo learn how to install and build BigDL (on both Linux and macOS), you can check out the \nBuild Page\n\n\nTo learn how to run BigDL programs (as either a local Java program or a Spark program), you can check out the \nGetting Started Page\n\n\nTo learn the details of Python support in BigDL, you can check out the \nPython Support Page\n\n\nTo try BigDL out on EC2, you can check out the \nRunning on EC2 Page\n\n\nTo learn how to create practical neural networks using BigDL in a couple of minutes, you can check out the \nTutorials Page\n\n\nFor more details, you can check out the \nDocuments Page\n (including Tutorials, Examples, Programming Guide, etc.)\n\n\n\n\nSupport\n\n\n\n\nYou can join the \nBigDL Google Group\n (or subscribe to the \nMail List\n) for more questions and discussions on BigDL\n\n\nYou can post bug reports and feature requests at the \nIssue Page",
+            "title": "About"
+        },
+        {
+            "location": "/about/#what-is-bigdl",
+            "text": "BigDL is a distributed deep learning library for Apache Spark; with BigDL, users can write their deep learning applications as standard Spark programs, which can directly run on top of existing Spark or Hadoop clusters.\n*  Rich deep learning support.  Modeled after  Torch , BigDL provides comprehensive support for deep learning, including numeric computing (via  Tensor ) and high level  neural networks ; in addition, users can load pre-trained  Caffe  or  Torch  models into Spark programs using BigDL.    Extremely high performance.  To achieve high performance, BigDL uses  Intel MKL  and multi-threaded programming in each Spark task. Consequently, it is orders of magnitude faster than out-of-box open source  Caffe ,  Torch  or  TensorFlow  on a single-node Xeon (i.e., comparable with mainstream GPU).    Efficiently scale-out.  BigDL can efficiently scale out to perform data analytics at \"Big Data scale\", by leveraging  Apache Spark  (a lightning fast distributed data processing framework), as well as efficient implementations of synchronous SGD and all-reduce communications on Spark.",
+            "title": "What is BigDL?"
+        },
+        {
+            "location": "/about/#why-bigdl",
+            "text": "You may want to write your deep learning programs using BigDL if:\n* You want to analyze a large amount of data on the same Big Data (Hadoop/Spark) cluster where the data are stored (in, say, HDFS, HBase, Hive, etc.).    You want to add deep learning functionalities (either training or prediction) to your Big Data (Spark) programs and/or workflow.    You want to leverage existing Hadoop/Spark clusters to run your deep learning applications, which can be then dynamically shared with other workloads (e.g., ETL, data warehouse, feature engineering, classical machine learning, graph analytics, etc.)",
+            "title": "Why BigDL?"
+        },
+        {
+            "location": "/about/#how-to-use-bigdl",
+            "text": "To learn how to install and build BigDL (on both Linux and macOS), you can check out the  Build Page  To learn how to run BigDL programs (as either a local Java program or a Spark program), you can check out the  Getting Started Page  To learn the details of Python support in BigDL, you can check out the  Python Support Page  To try BigDL out on EC2, you can check out the  Running on EC2 Page  To learn how to create practical neural networks using BigDL in a couple of minutes, you can check out the  Tutorials Page  For more details, you can check out the  Documents Page  (including Tutorials, Examples, Programming Guide, etc.)",
+            "title": "How to use BigDL?"
+        },
+        {
+            "location": "/about/#support",
+            "text": "You can join the  BigDL Google Group  (or subscribe to the  Mail List ) for more questions and discussions on BigDL  You can post bug reports and feature requests at the  Issue Page",
+            "title": "Support"
+        }
+    ]
+}
