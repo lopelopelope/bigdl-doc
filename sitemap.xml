@@ -4,15 +4,87 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-04-17</lastmod>
+     <lastmod>2017-04-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>/Overview/</loc>
-     <lastmod>2017-04-17</lastmod>
+     <loc>/overview/</loc>
+     <lastmod>2017-04-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/gettingstarted/</loc>
+     <lastmod>2017-04-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/programmingguide/</loc>
+     <lastmod>2017-04-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/building/</loc>
+     <lastmod>2017-04-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/pythonsupport/</loc>
+     <lastmod>2017-04-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tutorials/</loc>
+     <lastmod>2017-04-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/visualizationwithtensorboard/</loc>
+     <lastmod>2017-04-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/runningonEC2/</loc>
+     <lastmod>2017-04-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/examples/</loc>
+     <lastmod>2017-04-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/knownissues/</loc>
+     <lastmod>2017-04-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -20,7 +92,7 @@
     
     <url>
      <loc>/about/</loc>
-     <lastmod>2017-04-17</lastmod>
+     <lastmod>2017-04-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
