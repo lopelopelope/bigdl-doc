@@ -1,6 +1,6 @@
 # BigDL Documentation
 
-All official released docs are available in [BigDl Docs](https://intel-analytics.github.io/bigdl-doc/)
+All official released docs are available in [BigDL Docs](https://intel-analytics.github.io/bigdl-doc/)
 
 The source for bigDL documentation is in this directory under `sources/`. 
 Our documentation uses extended Markdown, as implemented by [MkDocs](http://mkdocs.org).
