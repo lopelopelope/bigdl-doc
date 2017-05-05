@@ -98,7 +98,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../About/">About</a>
+    <a class="" href="../about/">About</a>
 	    </li>
           
         </ul>
@@ -317,8 +317,8 @@ Clone BidDL as follows:  </p>
 </ul>
 <h4 id="next-steps">Next Steps</h4>
 <ul>
-<li>To learn how to run BigDL programs (as either a local Java program or a Spark program), you can check out the <a href="https://github.com/intel-analytics/BigDL/wiki/Getting-Started">Getting Started Page</a>.</li>
-<li>To learn the details of Python support in BigDL, you can check out the <a href="https://github.com/intel-analytics/BigDL/wiki/Python-Support">Python Support Page</a></li>
+<li>To learn how to run BigDL programs (as either a local Java program or a Spark program), you can check out the <a href="#getting-started">Getting Started Page</a>.</li>
+<li>To learn the details of Python support in BigDL, you can check out the <a href="#python-support">Python Support Page</a></li>
 </ul>
 <hr />
 <h2 id="getting-started">Getting Started</h2>
@@ -368,7 +368,7 @@ res9: com.intel.analytics.bigdl.tensor.Tensor[Double] =
 [com.intel.analytics.bigdl.tensor.DenseTensor of size 2x2]
 </code></pre>
 
-<p>For more details about the BigDL APIs, please refer to the <a href="https://github.com/intel-analytics/BigDL/wiki/Programming-Guide">Programming Guide</a>.</p>
+<p>For more details about the BigDL APIs, please refer to the <a href="#Programming-Guide">Programming Guide</a>.</p>
 <h3 id="spark-program">Spark Program</h3>
 <p>You can run a BigDL program, e.g., the <a href="https://github.com/intel-analytics/BigDL/tree/master/spark/dl/src/main/scala/com/intel/analytics/bigdl/models/vgg">VGG</a> training, as a standard Spark program (running in either local mode or cluster mode) as follows:</p>
 <ol>
@@ -417,8 +417,8 @@ res9: com.intel.analytics.bigdl.tensor.Tensor[Double] =
 </ul>
 <h3 id="next-steps_1">Next Steps</h3>
 <ul>
-<li>To learn the details of Python support in BigDL, you can check out the <a href="https://github.com/intel-analytics/BigDL/wiki/Python-Support">Python Support Page</a></li>
-<li>To learn how to create practical neural networks using BigDL in a couple of minutes, you can check out the <a href="https://github.com/intel-analytics/BigDL/wiki/Tutorials">Tutorials Page</a></li>
+<li>To learn the details of Python support in BigDL, you can check out the <a href="#Python-Support">Python Support Page</a></li>
+<li>To learn how to create practical neural networks using BigDL in a couple of minutes, you can check out the <a href="#tutorials">Tutorials Page</a></li>
 <li>You can check out the <a href="https://github.com/intel-analytics/BigDL/wiki/Documents">Document Page</a> for more details (including Tutorials, Examples, Programming Guide, etc.)</li>
 <li>You can join the <a href="https://groups.google.com/forum/#!forum/bigdl-user-group">BigDL Google Group</a> (or subscribe to the <a href="mailto:bigdl-user-group+subscribe@googlegroups.com">mail list</a>) for more questions and discussions on BigDL</li>
 <li>You can post bug reports and feature requests at the <a href="https://github.com/intel-analytics/BigDL/issues">Issue Page</a></li>
@@ -578,7 +578,7 @@ ${SPARK_HOME}/bin/pyspark \
   Engine.init
 </code></pre>
 
-<p><code>Engine.createSparkConf</code> will return a <code>SparkConf</code> populated with some appropriate configuration. And <code>Engine.init</code> will verify and read some environment information(e.g. executor numbers and executor cores) from the <code>SparkContext</code>. You can find more information about the initialization in the <a href="https://github.com/intel-analytics/BigDL/wiki/Programming-Guide#engine">Programming Guilde</a></p>
+<p><code>Engine.createSparkConf</code> will return a <code>SparkConf</code> populated with some appropriate configuration. And <code>Engine.init</code> will verify and read some environment information(e.g. executor numbers and executor cores) from the <code>SparkContext</code>. You can find more information about the initialization in the <a href="#engine">Programming Guide</a></p>
 <p>After the initialization, we need to:</p>
 <ol>
 <li><em><strong>Create the LeNet model</strong></em> by calling the <a href="https://github.com/intel-analytics/BigDL/tree/master/spark/dl/src/main/scala/com/intel/analytics/bigdl/models/lenet/LeNet5.scala"><code>LeNet5()</code></a>, which creates the LeNet-5 convolutional network model as follows:</li>
@@ -779,10 +779,10 @@ valloss = np.array(val_summary.read_scalar('Loss'))
 <p>After that, navigate to the TensorBoard dashboard using a browser. You can find the URL in the console output after TensorBoard is successfully launched; by default the URL is http://your_node:6006</p>
 <h4 id="visualizations-in-tensorboard">Visualizations in TensorBoard</h4>
 <p>Within the TensorBoard dashboard, you will be able to read the visualizations of each run, including the “Loss” and “Throughput” curves under the SCALARS tab (as illustrated below):
-<img alt="Scalar" src="../bigdl010/tensorboard_scalar.png" /></p>
+<img alt="Scalar" src="../tensorboard_scalar.png" /></p>
 <p>And “weights”, “bias”, “gradientWeights” and “gradientBias” under the DISTRIBUTIONS and HISTOGRAMS tabs (as illustrated below):
-<img alt="histogram1" src="../bigdl010/tensorboard_histo1.png" /></p>
-<p><img alt="histogram2" src="../bigdl010/tensorboard_histo2.png" /></p>
+<img alt="histogram1" src="../tensorboard_histo1.png" /></p>
+<p><img alt="histogram2" src="../tensorboard_histo2.png" /></p>
 <hr />
 <h2 id="running-on-ec2">Running on EC2</h2>
 <ul>
@@ -963,7 +963,7 @@ valloss = np.array(val_summary.read_scalar('Loss'))
 <hr />
 <h2 id="programming-guide">Programming Guide</h2>
 <h3 id="overview_1">Overview</h3>
-<p>Before starting the programming guide, you may have checked out the <a href="https://github.com/intel-analytics/BigDL/wiki/Getting-Started">Getting Started Page</a> and the <a href="https://github.com/intel-analytics/BigDL/wiki/Tutorials">Tutorials page</a>. This section will introduce the BigDL concepts and APIs for building deep learning applications on Spark.  </p>
+<p>Before starting the programming guide, you may have checked out the <a href="#getting-started">Getting Started Page</a> and the <a href="#tutorials">Tutorials page</a>. This section will introduce the BigDL concepts and APIs for building deep learning applications on Spark.  </p>
 <ul>
 <li><a href="#tensor">Tensor</a>  </li>
 <li><a href="#table">Table</a>  </li>
@@ -1077,7 +1077,7 @@ object LeNet5 {
 </code></pre>
 
 <h3 id="criterion">Criterion</h3>
-<p>Modeled after the <a href="https://github.com/torch/nn/blob/master/doc/criterion.md">Criterion</a> class in <a href="http://torch.ch/">Torch</a>, the <code>Criterion</code> class in BigDL will compute loss and gradient (given prediction and target). See <a href="https://github.com/intel-analytics/BigDL/wiki/Criterion">BigDL Criterions</a> for a list of supported criterions. </p>
+<p>Modeled after the <a href="https://github.com/torch/nn/blob/master/doc/criterion.md">Criterion</a> class in <a href="http://torch.ch/">Torch</a>, the <code>Criterion</code> class in BigDL will compute loss and gradient (given prediction and target). See <a href="#Criterion">BigDL Criterions</a> for a list of supported criterions. </p>
 <pre><code class="scala">scala&gt; val mse = MSECriterion() // mean square error lost, usually used for regression loss
 mse: com.intel.analytics.bigdl.nn.MSECriterion[Float] = com.intel.analytics.bigdl.nn.MSECriterion@0
 
@@ -1326,7 +1326,7 @@ val validationLoss = validationSummary.readScalar(&quot;Loss&quot;)
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../About/" class="btn btn-neutral float-right" title="About">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../about/" class="btn btn-neutral float-right" title="About">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../latest/" class="btn btn-neutral" title="Latest version Docs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -1358,7 +1358,7 @@ val validationLoss = validationSummary.readScalar(&quot;Loss&quot;)
         <span><a href="../latest/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../About/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../about/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
