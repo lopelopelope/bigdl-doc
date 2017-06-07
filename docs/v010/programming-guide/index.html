@@ -415,40 +415,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#regularizers" title="Regularizers" class="md-nav__link">
-    Regularizers
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example" title="Example" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#available-penalties" title="Available penalties" class="md-nav__link">
-    Available penalties
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#developing-new-regularizers" title="Developing new regularizers" class="md-nav__link">
-    Developing new regularizers
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#transformer" title="Transformer" class="md-nav__link">
     Transformer
   </a>
@@ -710,40 +676,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#regularizers" title="Regularizers" class="md-nav__link">
-    Regularizers
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example" title="Example" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#available-penalties" title="Available penalties" class="md-nav__link">
-    Available penalties
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#developing-new-regularizers" title="Developing new regularizers" class="md-nav__link">
-    Developing new regularizers
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#transformer" title="Transformer" class="md-nav__link">
     Transformer
   </a>
@@ -830,31 +762,26 @@
                 
                 
                 <h1 id="programming-guide"><strong>Programming Guide</strong></h1>
-<hr />
 <h2 id="overview"><strong>Overview</strong></h2>
-<p>Before starting the programming guide, you may have checked out the <a href="../Getting-Started">Getting Started Page</a> and the <a href="../Tutorials">Tutorials page</a>. This section will introduce the BigDL concepts and APIs for building deep learning applications on Spark.</p>
+<p>Before starting the programming guide, you may have checked out the <a href="#getting-started">Getting Started Page</a> and the <a href="#tutorials">Tutorials page</a>. This section will introduce the BigDL concepts and APIs for building deep learning applications on Spark.  </p>
 <ul>
-<li><a href="#tensor">Tensor</a></li>
-<li><a href="#table">Table</a></li>
-<li><a href="#module">Module</a><ul>
-<li><a href="#create-modules">Create modules</a></li>
-<li><a href="#construct-complex-networks">Construct complex networks</a></li>
-<li><a href="#build-neural-network-models">Build neural network models</a></li>
+<li><a href="#tensor">Tensor</a>  </li>
+<li><a href="#table">Table</a>  </li>
+<li><a href="#module">Module</a>  <ul>
+<li><a href="#create-modules">Create modules</a>  </li>
+<li><a href="#construct-complex-networks">Construct complex networks</a>  </li>
+<li><a href="#build-neural-network-models">Build neural network models</a>  </li>
 </ul>
 </li>
-<li><a href="#criterion">Criterion</a></li>
-<li><a href="#regularizers">Regularizers</a></li>
-<li><a href="#transformer">Transformer</a></li>
-<li><a href="#sample-and-minibatch">Sample and MiniBatch</a></li>
-<li><a href="#engine">Engine</a></li>
-<li><a href="#optimizer">Optimizer</a><ul>
-<li><a href="#how-BigDL-train-models-in-a-distributed-cluster?">How BigDL train models in a distributed cluster</a></li>
-</ul>
-</li>
-<li><a href="#validator">Validator</a></li>
-<li><a href="#model-persist">Model Persist</a></li>
-<li><a href="#logging">Logging</a></li>
-<li><a href="#visualization-via-tensorboard">Visualization via TensorBoard</a></li>
+<li><a href="#criterion">Criterion</a>  </li>
+<li><a href="#transformer">Transformer</a>  </li>
+<li><a href="#sample-and-minibatch">Sample and MiniBatch</a>  </li>
+<li><a href="#engine">Engine</a>  </li>
+<li><a href="#optimizer">Optimizer</a>  </li>
+<li><a href="#validator">Validator</a>  </li>
+<li><a href="#model-persist">Model Persist</a>  </li>
+<li><a href="#logging">Logging</a>  </li>
+<li><a href="#visualization-via-tensorboard">Visualization via TensorBoard</a>  </li>
 </ul>
 <h2 id="tensor"><strong>Tensor</strong></h2>
 <p>Modeled after the <a href="https://github.com/torch/torch7/blob/master/doc/tensor.md">Tensor</a> class in <a href="http://torch.ch/">Torch</a>, the <code>Tensor</code> <a href="https://github.com/intel-analytics/BigDL/tree/master/spark/dl/src/main/scala/com/intel/analytics/bigdl/tensor">package</a> (written in Scala and leveraging <a href="https://software.intel.com/en-us/intel-mkl">Intel MKL</a>) in BigDL provides numeric computing support for the deep learning applications (e.g., the input, output, weight, bias and gradient of the neural networks).</p>
@@ -950,7 +877,7 @@ object LeNet5 {
 </code></pre>
 
 <h2 id="criterion"><strong>Criterion</strong></h2>
-<p>Modeled after the <a href="https://github.com/torch/nn/blob/master/doc/criterion.md">Criterion</a> class in <a href="http://torch.ch/">Torch</a>, the <code>Criterion</code> class in BigDL will compute loss and gradient (given prediction and target). See <a href="https://github.com/intel-analytics/BigDL/wiki/Criterion">BigDL Criterions</a> for a list of supported criterions. </p>
+<p>Modeled after the <a href="https://github.com/torch/nn/blob/master/doc/criterion.md">Criterion</a> class in <a href="http://torch.ch/">Torch</a>, the <code>Criterion</code> class in BigDL will compute loss and gradient (given prediction and target). See <a href="#Criterion">BigDL Criterions</a> for a list of supported criterions. </p>
 <pre><code class="scala">scala&gt; val mse = MSECriterion() // mean square error lost, usually used for regression loss
 mse: com.intel.analytics.bigdl.nn.MSECriterion[Float] = com.intel.analytics.bigdl.nn.MSECriterion@0
 
@@ -973,25 +900,6 @@ res11: Float = 0.2600022
 
 </code></pre>
 
-<h2 id="regularizers"><strong>Regularizers</strong></h2>
-<p>Regularizers allow user to apply penalties to the parameters of layers during the optimization process. The penalties are aggregated to the loss function that the network optimizes.</p>
-<p>BigDL provides layer wise and parameter separated regularizers. User can apply different penalties to different layers and even different parameters of the same layer. Hence the exact API will depend on the layers.</p>
-<h3 id="example"><strong>Example</strong></h3>
-<pre><code class="scala">Linear(inputN, outputN, 
-       wRegularizer = L2Regularizer(0.1),
-       bRegularizer = L2Regularizer(0.1))
-</code></pre>
-
-<h3 id="available-penalties"><strong>Available penalties</strong></h3>
-<p>The defined regularizers are located in <code>com.intel.analytics.bigdl.optim</code> package.</p>
-<p>Three pre-defined regularizers are available:</p>
-<pre><code class="scala">L1L2Regularizer(0.)
-L1Regularizer(0.)
-L2Regularizer(0.)
-</code></pre>
-
-<h3 id="developing-new-regularizers"><strong>Developing new regularizers</strong></h3>
-<p>Users can define their own customized regularizers by inheriting the <code>Regularizer</code> trait and overriding the <code>accRegularization</code> function. The <code>accRegularization</code> function takes two arguments, one is the parameters to be penalized and the other is the gradient of the parameters. The derivatives of the penalty function should be defined in <code>accRegularization</code>.</p>
 <h2 id="transformer"><strong>Transformer</strong></h2>
 <p>Transformer is for pre-processing. In many deep learning workload, input data need to be pre-processed before fed into model. For example, in CNN, the image file need to be decoded from some compressed format(e.g. jpeg) to float arrays, normalized and cropped to some fixed shape. You can also find pre-processing in other types of deep learning work load(e.g. NLP, speech recognition). In BigDL, we provide many pre-process procedures for user. They're implemented as Transformer.</p>
 <p>The transformer interface is</p>
@@ -1185,6 +1093,8 @@ trainSummary.setSummaryTrigger(&quot;Parameters&quot;, Trigger.severalIteration(
 <pre><code class="scala">val trainLoss = trainSummary.readScalar(&quot;Loss&quot;)
 val validationLoss = validationSummary.readScalar(&quot;Loss&quot;)
 </code></pre>
+
+<hr />
                 
                   
                 

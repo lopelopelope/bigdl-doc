@@ -15,7 +15,7 @@
     
     
       
-        <title>Visualization With Tensorboard - BigDL Doc Website</title>
+        <title>Powered by - BigDL Doc Website</title>
       
     
     
@@ -73,12 +73,8 @@
           
             
               
-                <span class="md-header-nav__parent">
-                  User Guide
-                </span>
-              
             
-            Visualization With Tensorboard
+            Powered by
           
         </span>
       </div>
@@ -207,12 +203,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       User Guide
@@ -264,81 +258,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Visualization With Tensorboard
-      </label>
-    
-    <a href="./" title="Visualization With Tensorboard" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../visualization-with-tensorboard/" title="Visualization With Tensorboard" class="md-nav__link">
       Visualization With Tensorboard
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#generating-summary-info-in-bigdl" title="Generating summary info in BigDL" class="md-nav__link">
-    Generating summary info in BigDL
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#visualizing-training-with-tensorboard" title="Visualizing training with TensorBoard" class="md-nav__link">
-    Visualizing training with TensorBoard
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installing-tensorboard" title="Installing TensorBoard" class="md-nav__link">
-    Installing TensorBoard
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#launching-tensorboard" title="Launching TensorBoard" class="md-nav__link">
-    Launching TensorBoard
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#visualizations-in-tensorboard" title="Visualizations in TensorBoard" class="md-nav__link">
-    Visualizations in TensorBoard
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -483,11 +407,18 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../powered-by/" title="Powered by" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+    <a href="./" title="Powered by" class="md-nav__link md-nav__link--active">
       Powered by
     </a>
+    
   </li>
 
     
@@ -517,56 +448,6 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#generating-summary-info-in-bigdl" title="Generating summary info in BigDL" class="md-nav__link">
-    Generating summary info in BigDL
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#visualizing-training-with-tensorboard" title="Visualizing training with TensorBoard" class="md-nav__link">
-    Visualizing training with TensorBoard
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installing-tensorboard" title="Installing TensorBoard" class="md-nav__link">
-    Installing TensorBoard
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#launching-tensorboard" title="Launching TensorBoard" class="md-nav__link">
-    Launching TensorBoard
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#visualizations-in-tensorboard" title="Visualizations in TensorBoard" class="md-nav__link">
-    Visualizations in TensorBoard
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-    </ul>
   
 </nav>
                   </div>
@@ -578,79 +459,19 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/intel-analytics/BigDL/docs/source/docs/visualization-with-tensorboard.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                  <a href="https://github.com/intel-analytics/BigDL/docs/source/docs/powered-by.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
                 
                 
-                <h1 id="visualization-with-tensorboard"><strong>Visualization with TensorBoard</strong></h1>
-<hr />
-<h2 id="generating-summary-info-in-bigdl"><strong>Generating summary info in BigDL</strong></h2>
-<p>To enable visualization support, you need first properly configure the <code>Optimizer</code> to generate summary info for training (<code>TrainSummary</code>) and/or validation (<code>ValidationSummary</code>) before invoking <code>Optimizer.optimize()</code>, as illustrated below: </p>
-<p><em><strong>Generating summary info in Scala</strong></em></p>
-<pre><code class="scala">val optimizer = Optimizer(...)
-...
-val logdir = &quot;mylogdir&quot;
-val appName = &quot;myapp&quot;
-val trainSummary = TrainSummary(logdir, appName)
-val validationSummary = ValidationSummary(logdir, appName)
-optimizer.setTrainSummary(trainSummary)
-optimizer.setValidationSummary(validationSummary)
-...
-val trained_model = optimizer.optimize()
-</code></pre>
-
-<p><em><strong>Generating summary info in Python</strong></em></p>
-<pre><code class="python">optimizer = Optimizer(...)
-...
-log_dir = 'mylogdir'
-app_name = 'myapp'
-train_summary = TrainSummary(log_dir=log_dir, app_name=app_name)
-val_summary = ValidationSummary(log_dir=log_dir, app_name=app_name)
-optimizer.set_train_summary(train_summary)
-optimizer.set_val_summary(val_summary)
-...
-trainedModel = optimizer.optimize()
-</code></pre>
-
-<p>After you start to run your spark job, the train and validation summary will be saved to <code>mylogdir/myapp/train</code> and <code>mylogdir/myapp/validation</code> respectively (Note: you may want to use different <code>appName</code> for different job runs to avoid possible conflicts.) You may then read the summary info as follows:</p>
-<p><em><strong>Reading summary info in Scala</strong></em></p>
-<pre><code class="scala">val trainLoss = trainSummary.readScalar(&quot;Loss&quot;)
-val validationLoss = validationSummary.readScalar(&quot;Loss&quot;)
-...
-</code></pre>
-
-<p><em><strong>Reading summary info in Python</strong></em></p>
-<pre><code class="python">loss = np.array(train_summary.read_scalar('Loss'))
-valloss = np.array(val_summary.read_scalar('Loss'))
-...
-</code></pre>
-
-<h2 id="visualizing-training-with-tensorboard"><strong>Visualizing training with TensorBoard</strong></h2>
-<p>With the summary info generated, we can then use <a href="https://pypi.python.org/pypi/tensorboard">TensorBoard</a> to visualize the behaviors of the BigDL program.  </p>
-<h3 id="installing-tensorboard"><strong>Installing TensorBoard</strong></h3>
-<p>Prerequisites:
-<em> Python verison: 2.7, 3.4, 3.5, or 3.6
-</em> Pip version &gt;= 9.0.1</p>
-<p>To install TensorBoard using Python 2, you may run the command:</p>
-<pre><code class="bash">pip install tensorboard==1.0.0a4
-</code></pre>
-
-<p>To install TensorBoard using Python 3, you may run the command:</p>
-<pre><code class="bash">pip3 install tensorboard==1.0.0a4
-</code></pre>
-
-<p>Please refer to <a href="https://github.com/intel-analytics/BigDL/tree/master/spark/dl/src/main/scala/com/intel/analytics/bigdl/visualization#known-issues">this page</a> for possible issues when installing TensorBoard.</p>
-<h3 id="launching-tensorboard"><strong>Launching TensorBoard</strong></h3>
-<p>You can launch TensorBoard using the command below:</p>
-<pre><code>tensorboard --logdir=/tmp/bigdl_summaries
-</code></pre>
-
-<p>After that, navigate to the TensorBoard dashboard using a browser. You can find the URL in the console output after TensorBoard is successfully launched; by default the URL is http://your_node:6006</p>
-<h3 id="visualizations-in-tensorboard"><strong>Visualizations in TensorBoard</strong></h3>
-<p>Within the TensorBoard dashboard, you will be able to read the visualizations of each run, including the “Loss” and “Throughput” curves under the SCALARS tab (as illustrated below):
-<img alt="Scalar" src="../tensorboard_scalar.png" /></p>
-<p>And “weights”, “bias”, “gradientWeights” and “gradientBias” under the DISTRIBUTIONS and HISTOGRAMS tabs (as illustrated below):
-<img alt="histogram1" src="../tensorboard_histo1.png" />
-<img alt="histogram2" src="../tensorboard_histo2.png" /></p>
+                  <h1>Powered by</h1>
+                
+                <ul>
+<li><a href="https://databricks.com/blog/2017/02/09/intels-bigdl-databricks.html">Intel’s BigDL on Databricks</a></li>
+<li><a href="https://azure.microsoft.com/en-us/blog/use-bigdl-on-hdinsight-spark-for-distributed-deep-learning/">Use BigDL on AZure HDInsight</a></li>
+<li>A more detailed post for <a href="https://blogs.msdn.microsoft.com/azuredatalake/2017/03/17/how-to-use-bigdl-on-apache-spark-for-azure-hdinsight/">How to use BigDL on Apache Spark for Azure HDInsight</a></li>
+<li><a href="https://yq.aliyun.com/articles/73347">BigDL on AliCloud E-MapReduce (in Chinese)</a></li>
+<li><a href="https://aws.amazon.com/blogs/ai/running-bigdl-deep-learning-for-apache-spark-on-aws/">Running BigDL, Deep Learning for Apache Spark, on AWS</a></li>
+<li><a href="http://blog.cloudera.com/blog/2017/04/bigdl-on-cdh-and-cloudera-data-science-workbench/">BigDL on CDH and Cloudera Data Science Workbench</a></li>
+</ul>
                 
                   
                 
@@ -669,7 +490,7 @@ valloss = np.array(val_summary.read_scalar('Loss'))
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../tutorials/" title="Turtorial" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../known-issues/" title="Known Issues" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -678,19 +499,19 @@ valloss = np.array(val_summary.read_scalar('Loss'))
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Turtorial
+                Known Issues
               </span>
             </div>
           </a>
         
         
-          <a href="../running-on-EC2/" title="Running on EC2" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../support/" title="Support" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Running on EC2
+                Support
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

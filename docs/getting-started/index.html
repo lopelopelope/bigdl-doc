@@ -582,7 +582,7 @@
                 
                 
                 <h1 id="getting-started"><strong>Getting Started</strong></h1>
-<p>This page shows how to run a BigDL program, including  </p>
+<p>This page shows how to run a BigDL program, including</p>
 <ul>
 <li><a href="#before-running-a-bigdl-program">Before running a BigDL program</a></li>
 <li><a href="#interactive-spark-shell">Interactive Spark Shell</a></li>
@@ -628,8 +628,8 @@ res9: com.intel.analytics.bigdl.tensor.Tensor[Double] =
 [com.intel.analytics.bigdl.tensor.DenseTensor of size 2x2]
 </code></pre>
 
-<p>For more details about the BigDL APIs, please refer to the <a href="#Programming-Guide">Programming Guide</a>.</p>
-<h2 id="spark-program"><strong>Spark Program</strong></h2>
+<p>For more details about the BigDL APIs, please refer to the <a href="https://github.com/intel-analytics/BigDL/wiki/Programming-Guide">Programming Guide</a>.</p>
+<h2 id="spark-program">Spark Program</h2>
 <p>You can run a BigDL program, e.g., the <a href="https://github.com/intel-analytics/BigDL/tree/master/spark/dl/src/main/scala/com/intel/analytics/bigdl/models/vgg">VGG</a> training, as a standard Spark program (running in either local mode or cluster mode) as follows:</p>
 <ol>
 <li>
@@ -639,7 +639,7 @@ res9: com.intel.analytics.bigdl.tensor.Tensor[Double] =
 <p>Use the <code>bigdl.sh</code> script to launch the example as a Spark program as follows:</p>
 </li>
 </ol>
-<pre><code class="bash">  # Spark local mode
+<pre><code>  # Spark local mode
   ./dist/bin/bigdl.sh -- \
   spark-submit --master local[core_number] --class com.intel.analytics.bigdl.models.vgg.Train \
   dist/lib/bigdl-VERSION-jar-with-dependencies.jar \
@@ -672,14 +672,14 @@ res9: com.intel.analytics.bigdl.tensor.Tensor[Double] =
 <p>-f: The folder where your put the CIFAR-10 data set. Note in this example, this is just a local file folder on the Spark driver; as the CIFAR-10 data is somewhat small (about 120MB), we will directly send it from the driver to executors in the example.</p>
 </li>
 <li>
-<p>-b: The mini-batch size. The mini-batch size is expected to be a multiple of <strong>total cores</strong> used in the job. In this example, the mini-batch size is suggested to be set to <strong>total cores * 4</strong></p>
+<p>-b: The mini-batch size. The mini-batch size is expected to be a multiple of <em>total cores</em> used in the job. In this example, the mini-batch size is suggested to be set to <em>total cores * 4</em></p>
 </li>
 </ul>
-<h2 id="next-steps"><strong>Next Steps</strong></h2>
+<h2 id="next-steps">Next Steps</h2>
 <ul>
-<li>To learn the details of Python support in BigDL, you can check out the <a href="#Python-Support">Python Support Page</a></li>
-<li>To learn how to create practical neural networks using BigDL in a couple of minutes, you can check out the <a href="#tutorials">Tutorials Page</a></li>
-<li>You can check out the <a href="https://github.com/intel-analytics/BigDL/wiki/Documents">Document Page</a> for more details (including Tutorials, Examples, Programming Guide, etc.)</li>
+<li>To learn the details of Python support in BigDL, you can check out the <a href="https://github.com/intel-analytics/BigDL/wiki/Python-Support">Python Support Page</a></li>
+<li>To learn how to create practical neural networks using BigDL in a couple of minutes, you can check out the <a href="https://github.com/intel-analytics/BigDL/wiki/Tutorials">Tutorials Page</a></li>
+<li>you can check out the <a href="https://github.com/intel-analytics/BigDL/wiki/Documents">Document Page</a> for more details (including Tutorials, Examples, Programming Guide, etc.)</li>
 <li>You can join the <a href="https://groups.google.com/forum/#!forum/bigdl-user-group">BigDL Google Group</a> (or subscribe to the <a href="mailto:bigdl-user-group+subscribe@googlegroups.com">mail list</a>) for more questions and discussions on BigDL</li>
 <li>You can post bug reports and feature requests at the <a href="https://github.com/intel-analytics/BigDL/issues">Issue Page</a></li>
 </ul>

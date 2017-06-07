@@ -557,13 +557,14 @@
                 
                 <h1 id="tutorials"><strong>Tutorials</strong></h1>
 <p>This page shows how to build simple deep learning programs using BigDL, including:</p>
-<ul>
+<ol>
 <li><a href="#training-lenet-on-mnist">Training LeNet on MNIST</a> - the "hello world" for deep learning</li>
-<li><a href="#text-classification-working-with-spark-rdd">Text Classification</a> - working with Spark RDD transformations</li>
-<li><a href="#image-classification-working-with-spark-dataframe-and-ml-pipeline">Image Classification</a> - working with Spark DataFrame and ML pipeline</li>
+<li><a href="#text-classification---working-with-spark-rdd">Text Classification</a> - working with Spark RDD transformations</li>
+<li><a href="#image-classification---working-with-spark-dataframe-and-ml-pipeline">Image Classification</a> - working with Spark DataFrame and ML pipeline</li>
 <li><a href="#tutorial-text-classification-using-bigdl-python-api">Python Text Classifier</a> - text classification using BigDL Python APIs</li>
+<li><a href="https://github.com/intel-analytics/BigDL-Tutorials">BigDL Tutorials Notebooks</a> - A series of notebooks that step-by-step introduce you how to do data science on Apache Spark and BigDL framework</li>
 <li><a href="https://github.com/intel-analytics/BigDL/blob/branch-0.1/pyspark/dl/example/tutorial/simple_text_classification/text_classfication.ipynb">Jupyter Notebook Tutorial</a> - using BigDL Python APIs in Jupyter notebook</li>
-</ul>
+</ol>
 <h2 id="training-lenet-on-mnist"><strong>Training LeNet on MNIST</strong></h2>
 <p>This tutorial is an explanation of what is happening in the <a href="https://github.com/intel-analytics/BigDL/tree/master/spark/dl/src/main/scala/com/intel/analytics/bigdl/models/lenet/Train.scala">lenet</a> example, which trains <a href="http://yann.lecun.com/exdb/lenet/">LeNet-5</a> on the <a href="http://yann.lecun.com/exdb/mnist/">MNIST data</a> using BigDL.</p>
 <p>A BigDL program starts with <code>import com.intel.analytics.bigdl._</code>; it then <em><strong>creates the <code>SparkContext</code></strong></em> using the <code>SparkConf</code> returned by the <code>Engine</code>; after that, it <em><strong>initializes the <code>Engine</code></strong></em>.</p>
@@ -574,7 +575,7 @@
   Engine.init
 </code></pre>
 
-<p><code>Engine.createSparkConf</code> will return a <code>SparkConf</code> populated with some appropriate configuration. And <code>Engine.init</code> will verify and read some environment information(e.g. executor numbers and executor cores) from the <code>SparkContext</code>. You can find more information about the initialization in the <a href="#engine">Programming Guide</a></p>
+<p><code>Engine.createSparkConf</code> will return a <code>SparkConf</code> populated with some appropriate configuration. And <code>Engine.init</code> will verify and read some environment information(e.g. executor numbers and executor cores) from the <code>SparkContext</code>. You can find more information about the initialization in the <a href="https://github.com/intel-analytics/BigDL/wiki/Programming-Guide#engine">Programming Guilde</a></p>
 <p>After the initialization, we need to:</p>
 <ol>
 <li><em><strong>Create the LeNet model</strong></em> by calling the <a href="https://github.com/intel-analytics/BigDL/tree/master/spark/dl/src/main/scala/com/intel/analytics/bigdl/models/lenet/LeNet5.scala"><code>LeNet5()</code></a>, which creates the LeNet-5 convolutional network model as follows:</li>
@@ -605,14 +606,14 @@
         param.batchSize)
 </code></pre>
 
-<p>After that, we create the <a href="https://github.com/intel-analytics/BigDL/tree/master/spark/dl/src/main/scala/com/intel/analytics/bigdl/optim"><code>Optimizer</code></a> (either a distributed or local one depending on whether it runs on Spark or not) by specifying the <code>DataSet</code>, the model and the <code>Criterion</code> (which, given input and target, computes gradient per given loss function):</p>
+<p>After that, we <em><strong>create the <a href="https://github.com/intel-analytics/BigDL/tree/master/spark/dl/src/main/scala/com/intel/analytics/bigdl/optim"><code>Optimizer</code></a></strong></em> (either a distributed or local one depending on whether it runs on Spark or not) by specifying the <code>DataSet</code>, the model and the <code>Criterion</code> (which, given input and target, computes gradient per given loss function):</p>
 <pre><code class="scala">  val optimizer = Optimizer(
     model = model,
     dataset = trainSet,
     criterion = ClassNLLCriterion[Float]())
 </code></pre>
 
-<p>Finally (after optionally specifying the validation data and methods for the <code>Optimizer</code>), we train the model by calling <code>Optimizer.optimize()</code>:</p>
+<p>Finally (after optionally specifying the validation data and methods for the <code>Optimizer</code>), we <em><strong>train the model by calling <code>Optimizer.optimize()</code></strong></em>:</p>
 <pre><code class="scala">  optimizer
     .setValidation(
       trigger = Trigger.everyEpoch,
@@ -623,7 +624,7 @@
     .optimize()
 </code></pre>
 
-<h2 id="text-classification-working-with-spark-rdd"><strong>Text Classification</strong> - Working with Spark RDD</h2>
+<h2 id="text-classification-working-with-spark-rdd">Text Classification - Working with Spark RDD</h2>
 <p>This tutorial describes the <a href="https://github.com/intel-analytics/BigDL/tree/master/spark/dl/src/main/scala/com/intel/analytics/bigdl/example/textclassification">text_classification</a> example, which builds a text classifier using a simple convolutional neural network (CNN) model. (It was first described by <a href="https://blog.keras.io/using-pre-trained-word-embeddings-in-a-keras-model.html">this Keras tutorial</a>).</p>
 <p>After importing <code>com.intel.analytics.bigdl._</code> and some initialization, the <a href="https://github.com/intel-analytics/BigDL/blob/master/spark/dl/src/main/scala/com/intel/analytics/bigdl/example/textclassification/TextClassifier.scala">example</a> broadcasts the pre-trained world embedding and loads the input data using RDD transformations:</p>
 <pre><code class="scala">  // For large dataset, you might want to get such RDD[(String, Float)] from HDFS

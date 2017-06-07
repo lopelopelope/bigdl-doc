@@ -15,7 +15,7 @@
     
     
       
-        <title>Visualization With Tensorboard - BigDL Doc Website</title>
+        <title>Known Issues - BigDL Doc Website</title>
       
     
     
@@ -73,12 +73,8 @@
           
             
               
-                <span class="md-header-nav__parent">
-                  User Guide
-                </span>
-              
             
-            Visualization With Tensorboard
+            Known Issues
           
         </span>
       </div>
@@ -207,12 +203,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       User Guide
@@ -264,81 +258,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Visualization With Tensorboard
-      </label>
-    
-    <a href="./" title="Visualization With Tensorboard" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../visualization-with-tensorboard/" title="Visualization With Tensorboard" class="md-nav__link">
       Visualization With Tensorboard
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#generating-summary-info-in-bigdl" title="Generating summary info in BigDL" class="md-nav__link">
-    Generating summary info in BigDL
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#visualizing-training-with-tensorboard" title="Visualizing training with TensorBoard" class="md-nav__link">
-    Visualizing training with TensorBoard
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installing-tensorboard" title="Installing TensorBoard" class="md-nav__link">
-    Installing TensorBoard
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#launching-tensorboard" title="Launching TensorBoard" class="md-nav__link">
-    Launching TensorBoard
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#visualizations-in-tensorboard" title="Visualizations in TensorBoard" class="md-nav__link">
-    Visualizations in TensorBoard
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -471,11 +395,20 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../known-issues/" title="Known Issues" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+    <a href="./" title="Known Issues" class="md-nav__link md-nav__link--active">
       Known Issues
     </a>
+    
   </li>
 
     
@@ -520,54 +453,6 @@
     
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#generating-summary-info-in-bigdl" title="Generating summary info in BigDL" class="md-nav__link">
-    Generating summary info in BigDL
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#visualizing-training-with-tensorboard" title="Visualizing training with TensorBoard" class="md-nav__link">
-    Visualizing training with TensorBoard
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installing-tensorboard" title="Installing TensorBoard" class="md-nav__link">
-    Installing TensorBoard
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#launching-tensorboard" title="Launching TensorBoard" class="md-nav__link">
-    Launching TensorBoard
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#visualizations-in-tensorboard" title="Visualizations in TensorBoard" class="md-nav__link">
-    Visualizations in TensorBoard
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -578,79 +463,33 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/intel-analytics/BigDL/docs/source/docs/visualization-with-tensorboard.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                  <a href="https://github.com/intel-analytics/BigDL/docs/source/docs/known-issues.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
                 
                 
-                <h1 id="visualization-with-tensorboard"><strong>Visualization with TensorBoard</strong></h1>
-<hr />
-<h2 id="generating-summary-info-in-bigdl"><strong>Generating summary info in BigDL</strong></h2>
-<p>To enable visualization support, you need first properly configure the <code>Optimizer</code> to generate summary info for training (<code>TrainSummary</code>) and/or validation (<code>ValidationSummary</code>) before invoking <code>Optimizer.optimize()</code>, as illustrated below: </p>
-<p><em><strong>Generating summary info in Scala</strong></em></p>
-<pre><code class="scala">val optimizer = Optimizer(...)
-...
-val logdir = &quot;mylogdir&quot;
-val appName = &quot;myapp&quot;
-val trainSummary = TrainSummary(logdir, appName)
-val validationSummary = ValidationSummary(logdir, appName)
-optimizer.setTrainSummary(trainSummary)
-optimizer.setValidationSummary(validationSummary)
-...
-val trained_model = optimizer.optimize()
-</code></pre>
-
-<p><em><strong>Generating summary info in Python</strong></em></p>
-<pre><code class="python">optimizer = Optimizer(...)
-...
-log_dir = 'mylogdir'
-app_name = 'myapp'
-train_summary = TrainSummary(log_dir=log_dir, app_name=app_name)
-val_summary = ValidationSummary(log_dir=log_dir, app_name=app_name)
-optimizer.set_train_summary(train_summary)
-optimizer.set_val_summary(val_summary)
-...
-trainedModel = optimizer.optimize()
-</code></pre>
-
-<p>After you start to run your spark job, the train and validation summary will be saved to <code>mylogdir/myapp/train</code> and <code>mylogdir/myapp/validation</code> respectively (Note: you may want to use different <code>appName</code> for different job runs to avoid possible conflicts.) You may then read the summary info as follows:</p>
-<p><em><strong>Reading summary info in Scala</strong></em></p>
-<pre><code class="scala">val trainLoss = trainSummary.readScalar(&quot;Loss&quot;)
-val validationLoss = validationSummary.readScalar(&quot;Loss&quot;)
-...
-</code></pre>
-
-<p><em><strong>Reading summary info in Python</strong></em></p>
-<pre><code class="python">loss = np.array(train_summary.read_scalar('Loss'))
-valloss = np.array(val_summary.read_scalar('Loss'))
-...
-</code></pre>
-
-<h2 id="visualizing-training-with-tensorboard"><strong>Visualizing training with TensorBoard</strong></h2>
-<p>With the summary info generated, we can then use <a href="https://pypi.python.org/pypi/tensorboard">TensorBoard</a> to visualize the behaviors of the BigDL program.  </p>
-<h3 id="installing-tensorboard"><strong>Installing TensorBoard</strong></h3>
-<p>Prerequisites:
-<em> Python verison: 2.7, 3.4, 3.5, or 3.6
-</em> Pip version &gt;= 9.0.1</p>
-<p>To install TensorBoard using Python 2, you may run the command:</p>
-<pre><code class="bash">pip install tensorboard==1.0.0a4
-</code></pre>
-
-<p>To install TensorBoard using Python 3, you may run the command:</p>
-<pre><code class="bash">pip3 install tensorboard==1.0.0a4
-</code></pre>
-
-<p>Please refer to <a href="https://github.com/intel-analytics/BigDL/tree/master/spark/dl/src/main/scala/com/intel/analytics/bigdl/visualization#known-issues">this page</a> for possible issues when installing TensorBoard.</p>
-<h3 id="launching-tensorboard"><strong>Launching TensorBoard</strong></h3>
-<p>You can launch TensorBoard using the command below:</p>
-<pre><code>tensorboard --logdir=/tmp/bigdl_summaries
-</code></pre>
-
-<p>After that, navigate to the TensorBoard dashboard using a browser. You can find the URL in the console output after TensorBoard is successfully launched; by default the URL is http://your_node:6006</p>
-<h3 id="visualizations-in-tensorboard"><strong>Visualizations in TensorBoard</strong></h3>
-<p>Within the TensorBoard dashboard, you will be able to read the visualizations of each run, including the “Loss” and “Throughput” curves under the SCALARS tab (as illustrated below):
-<img alt="Scalar" src="../tensorboard_scalar.png" /></p>
-<p>And “weights”, “bias”, “gradientWeights” and “gradientBias” under the DISTRIBUTIONS and HISTOGRAMS tabs (as illustrated below):
-<img alt="histogram1" src="../tensorboard_histo1.png" />
-<img alt="histogram2" src="../tensorboard_histo2.png" /></p>
+                <h1 id="known-issues"><strong>Known Issues</strong></h1>
+<ul>
+<li>
+<p>Currently, BigDL uses synchronous mini-batch SGD in model training. The mini-batch size is expected to be a multiple of <strong>total cores</strong> used in the job.</p>
+</li>
+<li>
+<p>You may observe very poor performance when running BigDL for Spark 2.0 with Java 7; it is highly recommended to use Java 8 when building and running BigDL for Spark 2.0.</p>
+</li>
+<li>
+<p>On Spark 2.0, please use default Java serializer instead of Kryo because of <a href="https://github.com/EsotericSoftware/kryo/issues/341">Kryo Issue 341</a>. The issue has been fixed in Kryo 4.0. However, Spark 2.0 uses Kryo 3.0.3. Spark 1.5 and 1.6 do not have this problem.</p>
+</li>
+<li>
+<p>On CentOS 6 and 7, please increase the max user processes to a larger value (e.g., 514585); otherwise, you may see errors like "unable to create new native thread".</p>
+</li>
+<li>
+<p>Currently, BigDL will load all the training and validation data into memory during training. You may encounter errors if it runs out of memory.</p>
+</li>
+<li>
+<p>If you meet the program stuck after <strong>Save model...</strong> on Mesos, check the <code>spark.driver.memory</code> and increase the value. Eg, VGG on Cifar10 may need 20G+.</p>
+</li>
+<li>
+<p>If you meet <code>can't find executor core number</code> on Mesos, you should pass the executor cores through <code>--conf spark.executor.cores=xxx</code></p>
+</li>
+</ul>
                 
                   
                 
@@ -669,7 +508,7 @@ valloss = np.array(val_summary.read_scalar('Loss'))
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../tutorials/" title="Turtorial" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../python-api-doc/" title="Python API Docs" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -678,19 +517,19 @@ valloss = np.array(val_summary.read_scalar('Loss'))
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Turtorial
+                Python API Docs
               </span>
             </div>
           </a>
         
         
-          <a href="../running-on-EC2/" title="Running on EC2" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../powered-by/" title="Powered by" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Running on EC2
+                Powered by
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

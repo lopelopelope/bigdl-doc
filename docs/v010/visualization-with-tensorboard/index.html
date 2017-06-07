@@ -582,7 +582,6 @@
                 
                 
                 <h1 id="visualization-with-tensorboard"><strong>Visualization with TensorBoard</strong></h1>
-<hr />
 <h2 id="generating-summary-info-in-bigdl"><strong>Generating summary info in BigDL</strong></h2>
 <p>To enable visualization support, you need first properly configure the <code>Optimizer</code> to generate summary info for training (<code>TrainSummary</code>) and/or validation (<code>ValidationSummary</code>) before invoking <code>Optimizer.optimize()</code>, as illustrated below: </p>
 <p><em><strong>Generating summary info in Scala</strong></em></p>
@@ -591,7 +590,7 @@
 val logdir = &quot;mylogdir&quot;
 val appName = &quot;myapp&quot;
 val trainSummary = TrainSummary(logdir, appName)
-val validationSummary = ValidationSummary(logdir, appName)
+val talidationSummary = ValidationSummary(logdir, appName)
 optimizer.setTrainSummary(trainSummary)
 optimizer.setValidationSummary(validationSummary)
 ...
@@ -649,8 +648,9 @@ valloss = np.array(val_summary.read_scalar('Loss'))
 <p>Within the TensorBoard dashboard, you will be able to read the visualizations of each run, including the “Loss” and “Throughput” curves under the SCALARS tab (as illustrated below):
 <img alt="Scalar" src="../tensorboard_scalar.png" /></p>
 <p>And “weights”, “bias”, “gradientWeights” and “gradientBias” under the DISTRIBUTIONS and HISTOGRAMS tabs (as illustrated below):
-<img alt="histogram1" src="../tensorboard_histo1.png" />
-<img alt="histogram2" src="../tensorboard_histo2.png" /></p>
+<img alt="histogram1" src="../tensorboard_histo1.png" /></p>
+<p><img alt="histogram2" src="../tensorboard_histo2.png" /></p>
+<hr />
                 
                   
                 
