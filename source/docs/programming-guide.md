@@ -1,8 +1,8 @@
 ---
-## Programming Guide
+# **Programming Guide**
 
-### Overview
-Before starting the programming guide, you may have checked out the [Getting Started Page](https://github.com/intel-analytics/BigDL/wiki/Getting-Started) and the [Tutorials page](https://github.com/intel-analytics/BigDL/wiki/Tutorials). This section will introduce the BigDL concepts and APIs for building deep learning applications on Spark.  
+## **Overview**
+Before starting the programming guide, you may have checked out the [Getting Started Page](#getting-started) and the [Tutorials page](#tutorials). This section will introduce the BigDL concepts and APIs for building deep learning applications on Spark.  
 
 * [Tensor](#tensor)  
 * [Table](#table)  
@@ -20,7 +20,7 @@ Before starting the programming guide, you may have checked out the [Getting Sta
 * [Logging](#logging)  
 * [Visualization via TensorBoard](#visualization-via-tensorboard)  
 
-### Tensor
+## **Tensor**
 Modeled after the [Tensor](https://github.com/torch/torch7/blob/master/doc/tensor.md) class in [Torch](http://torch.ch/), the ```Tensor``` [package](https://github.com/intel-analytics/BigDL/tree/master/spark/dl/src/main/scala/com/intel/analytics/bigdl/tensor) (written in Scala and leveraging [Intel MKL](https://software.intel.com/en-us/intel-mkl)) in BigDL provides numeric computing support for the deep learning applications (e.g., the input, output, weight, bias and gradient of the neural networks).
 
 A ```Tensor``` is essentially a multi-dimensional array of numeric types (e.g., ```Int```, ```Float```, ```Double```, etc.); you may check it out in the interactive Scala shell (by typing ```scala -cp bigdl_0.1-0.1.0-SNAPSHOT-jar-with-dependencies.jar```), for instance:
@@ -35,7 +35,7 @@ tensor: com.intel.analytics.bigdl.tensor.Tensor[Float] =
 [com.intel.analytics.bigdl.tensor.DenseTensor of size 2x3]
 ```
 
-### Table
+## **Table**
 Modeled after the [Table](https://github.com/torch/nn/blob/master/doc/table.md) class in [Torch](http://torch.ch/), the ```Table``` class (defined in package ```com.intel.analytics.bigdl.utils```) is widely used in BigDL (e.g., a ```Table``` of ```Tensor``` can be used as the input or output of neural networks). In essence, a ```Table``` can be considered as a key-value map, and there is also a syntax sugar to create a ```Table``` using ```T()``` in BigDL.
 
 ```scala
@@ -55,10 +55,10 @@ res2: com.intel.analytics.bigdl.utils.Table =
 
 ```
 
-### Module
+## **Module**
 Modeled after the [nn](https://github.com/torch/nn) package in [Torch](http://torch.ch/), the ```Module``` class in BigDL represents individual layers of the neural network (such as ```ReLU```, ```Linear```, ```SpatialConvolution```, ```Sequential```, etc.).
 
-#### Create modules
+### **Create modules**
 For instance, we can create a ```Linear``` module as follows:
 ```scala
 scala> import com.intel.analytics.bigdl.numeric.NumericFloat // import global float tensor numeric type
@@ -80,7 +80,7 @@ res5: com.intel.analytics.bigdl.tensor.Tensor[Float] =
 [com.intel.analytics.bigdl.tensor.DenseTensor of size 4x3]
 ```
 
-#### Construct complex networks
+### **Construct complex networks**
 We can use the ```Container``` module (e.g., ```Sequential```, ```Concat```, ```ConcatTable```, etc.) to combine individual models to build complex networks, for instance
 ```scala
 scala> val g = Sum()
@@ -95,7 +95,7 @@ nn.Sequential {
 }
 ```
 
-#### Build neural network models
+### **Build neural network models**
 We can create neural network models, e.g., [LeNet-5](http://yann.lecun.com/exdb/lenet/), using different ```Module``` as follows:
 
 ```scala
@@ -122,8 +122,8 @@ object LeNet5 {
 }
 ```
 
-### Criterion
-Modeled after the [Criterion](https://github.com/torch/nn/blob/master/doc/criterion.md) class in [Torch](http://torch.ch/), the ```Criterion``` class in BigDL will compute loss and gradient (given prediction and target). See [BigDL Criterions](https://github.com/intel-analytics/BigDL/wiki/Criterion) for a list of supported criterions. 
+## **Criterion**
+Modeled after the [Criterion](https://github.com/torch/nn/blob/master/doc/criterion.md) class in [Torch](http://torch.ch/), the ```Criterion``` class in BigDL will compute loss and gradient (given prediction and target). See [BigDL Criterions](#Criterion) for a list of supported criterions. 
 ```scala
 scala> val mse = MSECriterion() // mean square error lost, usually used for regression loss
 mse: com.intel.analytics.bigdl.nn.MSECriterion[Float] = com.intel.analytics.bigdl.nn.MSECriterion@0
@@ -146,7 +146,7 @@ scala> mse.forward(prediction, target) // use mse to get the loss, returns 1/n s
 res11: Float = 0.2600022
 
 ```
-### Transformer
+## **Transformer**
 Transformer is for pre-processing. In many deep learning workload, input data need to be pre-processed before fed into model. For example, in CNN, the image file need to be decoded from some compressed format(e.g. jpeg) to float arrays, normalized and cropped to some fixed shape. You can also find pre-processing in other types of deep learning work load(e.g. NLP, speech recognition). In BigDL, we provide many pre-process procedures for user. They're implemented as Transformer.
 
 The transformer interface is
@@ -179,14 +179,14 @@ val rddB : RDD[B] = rdd.mapPartitions(tran(_))
 
 Transformer here is different from [Spark ML pipeline Transformer](https://spark.apache.org/docs/latest/ml-pipeline.html). But they serve similar purpose. 
 
-### Sample and MiniBatch
+## **Sample and MiniBatch**
 **Sample** represent one `item` of your data set. For example, one image in image classification, one word in word2vec and one sentence in RNN language model.
 
 **MiniBatch** represent `a batch of samples`. For computing efficiency, we would like to train/inference data in batches.
 
 You need to convert your data type to Sample or MiniBatch by transformers, and then do optimization or inference. Please note that if you provide Sample format, BigDL will still convert it to MiniBatch automatically before optimization or inference.
 
-### Engine
+## **Engine**
 BigDL need some environment variables be set correctly to get a good performance. `Engine.init` method can help you set and verify them.
 
 **How to do in the code?**
@@ -218,7 +218,7 @@ Engine.init    // scala: check spark conf values
 ```python
 init_engine()    # python: check spark conf values
 ```
-### Optimizer
+## **Optimizer**
 **Optimizer** represent a optimization process, aka training. 
 
 You need to provide the model, train data set and loss function to start a optimization.
@@ -265,7 +265,7 @@ You can provide a separated data set for validation.
 optimizer.setValidation(Trigger.everyEpoch, valData, Array(new Top1Accuracy[Float]))
 ```
 
-#### How BigDL train models in a distributed cluster?
+### **How BigDL train models in a distributed cluster?**
 BigDL distributed training is data parallelism. The training data is split among workers and cached in memory. A complete model is also cached on each worker. The model only uses the data of the same worker in the training.
 
 BigDL employs a synchronous distributed training. In each iteration, each worker will sync the latest weights, calculate
@@ -273,7 +273,7 @@ gradients with local data and local model, sync the gradients and update the wei
 
 In gradients and weights sync, BigDL doesn't use the RDD APIs like(broadcast, reduce, aggregate, treeAggregate). The problem of these methods is every worker needs to communicate with driver, so the driver will become the bottleneck if the parameter is too large or the workers are too many. Instead, BigDL implement a P2P algorithm for parameter sync to remove the bottleneck. For detail of the algorithm, please see the [code](https://github.com/intel-analytics/BigDL/blob/master/spark/dl/src/main/scala/com/intel/analytics/bigdl/optim/DistriOptimizer.scala)
 
-### Validator
+## **Validator**
 Validator represent testing the model with some metrics. The model can be loaded from disk or trained from optimization. The metrics can be Top1 accuracy, Loss, etc. See [Validation Methods](https://github.com/intel-analytics/BigDL/wiki/Validation-Methods) for a list of supported validation methods
 ```scala
 // Test the model with validationSet and Top1 accuracy
@@ -281,7 +281,7 @@ val validator = Validator(model, validationSet)
 val result = validator.test(Array(new Top1Accuracy[Float]))
 ```
 
-### Model Persist
+## **Model Persist**
 You can save your model like this
 ```scala
 // Save as Java object
@@ -299,7 +299,7 @@ Module.load("./model")
 Module.loadTorch("./model.t7")
 ```
 
-### Logging
+## **Logging**
 In the training, BigDL provide a straight forward logging like this. You can see epoch/iteration/loss/throughput directly from the log.
 ```
 2017-01-10 10:03:55 INFO  DistriOptimizer$:241 - [Epoch 1 0/5000][Iteration 1][Wall Clock XXX] Train 512 in XXXseconds. Throughput is XXX records/second. Loss is XXX.
@@ -320,7 +320,7 @@ This method will redirect all logs of `org`, `akka`, `breeze` to `bigdl.log` wit
 + You can disable the redirection with java property `-Dbigdl.utils.LoggerFilter.disable=true`. By default, it will do redirect of all examples and models in our code.
 + You can set where the `bigdl.log` will be generated with `-Dbigdl.utils.LoggerFilter.logFile=<path>`. By default, it will be generated under current workspace.
 
-### Visualization via TensorBoard
+## **Visualization via TensorBoard**
 To enable visualization, you need to [install tensorboard](https://github.com/intel-analytics/BigDL/blob/master/spark/dl/src/main/scala/com/intel/analytics/bigdl/visualization/README.md) first, then `setTrainSummary()` and `setValidationSummary()` to your optimizer before you call `optimize()`:
 ```scala
 val logdir = "mylogdir"

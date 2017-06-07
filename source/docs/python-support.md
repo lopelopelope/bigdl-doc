@@ -1,17 +1,17 @@
-## Python Support
+# **Python Support**
 
 * [BigDL Python API](#bigdl-python-api)
     * [Tutorial: Text Classification using BigDL Python API](#tutorial-text-classification-using-bigdl-python-api)
-* [Running BigDL Python Program](#running-bigdl-python-programs)
+* [Running BigDL Python Programs](#running-bigdl-python-programs)
     * [Automatically Packaging Python Dependency](#automatically-packaging-python-dependency)
 * [Running BigDL Python Code in Notebooks](#running-bigdl-python-code-in-notebooks)
 
-###BigDL Python API
+## **BigDL Python API**
 Python is one of the most widely used language in the big data and data science community, and BigDL provides full support for Python APIs (built on top of PySpark), which are similar to the [Scala interface](https://www.javadoc.io/doc/com.intel.analytics.bigdl/bigdl/0.1.0-doc). (Please note currently the Python support has been tested with Python 2.7 and Spark 1.6 / Spark 2.0). 
 
 With the full Python API support in BigDL, users can use deep learning models in BigDL together with existing Python libraries (e.g., Numpy and Pandas), which automatically runs in a distributed fashion to process large volumes of data on Spark.  
 
-##### Tutorial: Text Classification using BigDL Python API  
+### **Tutorial: Text Classification using BigDL Python API**  
 
 This tutorial describes the [textclassifier](https://github.com/intel-analytics/BigDL/tree/master/pyspark/dl/models/textclassifier) example written using BigDL Python API, which builds a text classifier using a CNN (convolutional neural network) or LSTM or GRU model (as specified by the user). (It was first described by [this Keras tutorial](https://blog.keras.io/using-pre-trained-word-embeddings-in-a-keras-model.html))
 
@@ -79,7 +79,7 @@ optimizer = Optimizer(
 train_model = optimizer.optimize()
 ```
 
-### Running BigDL Python Programs
+## **Running BigDL Python Programs**
 A BigDL Python program runs as a standard PySPark program, which requires all Python dependency (e.g., NumPy) used by the program be installed on each node in the Spark cluster. One can run the BigDL [lenet Python example](https://github.com/intel-analytics/BigDL/tree/master/pyspark/dl/models/lenet) using [spark-submit](http://spark.apache.org/docs/latest/submitting-applications.html) as follows:
 ```bash
 PYTHON_API_PATH=${BigDL_HOME}/dist/lib/bigdl-VERSION-python-api.zip
@@ -102,11 +102,11 @@ ${SPARK_HOME}/bin/spark-submit \
     --conf spark.executor.extraClassPath=bigdl-VERSION-jar-with-dependencies.jar \
     ${BigDL_HOME}/pyspark/dl/models/lenet/lenet5.py
 ```
-##### Automatically Packaging Python Dependency
 
+### **Automatically Packaging Python Dependency**
 You can run BigDL Python programs on YARN clusters without changes to the cluster (e.g., no need to pre-install the Python dependency). You  can first package all the required Python dependency into a virtual environment on the local node (where you will run the spark-submit command), and then directly use spark-submit to run the BigDL Python program on the YARN cluster (using that virtual environment). Please refer to this [patch](https://github.com/intel-analytics/BigDL/pull/706) for more details.
 
-### Running BigDL Python Code in Notebooks
+## **Running BigDL Python Code in Notebooks**
 With the full Python API support in BigDL, users can now use BigDL together with powerful notebooks (such as Jupyter notebook) in a distributed fashion across the cluster, combining Python libraries, Spark SQL / dataframes and MLlib, deep learning models in BigDL, as well as interactive visualization tools.
 
 First, install all the necessary libraries on the local node where you will run Jupyter, e.g., 
@@ -142,5 +142,3 @@ ${SPARK_HOME}/bin/pyspark \
 ```
 
 After successfully launching Jupyter, you will be able to navigate to the notebook dashboard using your browser. You can find the exact URL in the console output when you started Jupyter; by default, the dashboard URL is http://your_node:8888/
-
----

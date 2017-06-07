@@ -1,14 +1,14 @@
-## Tutorials
+# **Tutorials**
 
 This page shows how to build simple deep learning programs using BigDL, including:
 
-1. [Training LeNet on MNIST](#training-lenet-on-mnist) - the "hello world" for deep learning
-2. [Text Classification](#text-classification-working-with-spark-rdd) - working with Spark RDD transformations
-3. [Image Classification](#image-classification-working-with-spark-dataframe-and-ml-pipeline) - working with Spark DataFrame and ML pipeline
-4. [Python Text Classifier](#tutorial-text-classification-using-bigdl-python-api) text classification using BigDL Python APIs
-5. [Jupyter Notebook Tutorial](https://github.com/intel-analytics/BigDL/blob/branch-0.1/pyspark/dl/example/tutorial/simple_text_classification/text_classfication.ipynb) - using BigDL Python APIs in Jupyter notebook
+* [Training LeNet on MNIST](#training-lenet-on-mnist) - the "hello world" for deep learning
+* [Text Classification](#text-classification-working-with-spark-rdd) - working with Spark RDD transformations
+* [Image Classification](#image-classification-working-with-spark-dataframe-and-ml-pipeline) - working with Spark DataFrame and ML pipeline
+* [Python Text Classifier](#tutorial-text-classification-using-bigdl-python-api) - text classification using BigDL Python APIs
+* [Jupyter Notebook Tutorial](https://github.com/intel-analytics/BigDL/blob/branch-0.1/pyspark/dl/example/tutorial/simple_text_classification/text_classfication.ipynb) - using BigDL Python APIs in Jupyter notebook
 
-### Training LeNet on MNIST
+## **Training LeNet on MNIST**
 This tutorial is an explanation of what is happening in the [lenet](https://github.com/intel-analytics/BigDL/tree/master/spark/dl/src/main/scala/com/intel/analytics/bigdl/models/lenet/Train.scala) example, which trains [LeNet-5](http://yann.lecun.com/exdb/lenet/) on the [MNIST data](http://yann.lecun.com/exdb/mnist/) using BigDL.
 
 A BigDL program starts with `import com.intel.analytics.bigdl._`; it then _**creates the `SparkContext`**_ using the `SparkConf` returned by the `Engine`; after that, it _**initializes the `Engine`**_.
@@ -19,7 +19,7 @@ A BigDL program starts with `import com.intel.analytics.bigdl._`; it then _**cre
   val sc = new SparkContext(conf)
   Engine.init
 ````
-````Engine.createSparkConf```` will return a ````SparkConf```` populated with some appropriate configuration. And ````Engine.init```` will verify and read some environment information(e.g. executor numbers and executor cores) from the ````SparkContext````. You can find more information about the initialization in the [Programming Guilde](https://github.com/intel-analytics/BigDL/wiki/Programming-Guide#engine)
+````Engine.createSparkConf```` will return a ````SparkConf```` populated with some appropriate configuration. And ````Engine.init```` will verify and read some environment information(e.g. executor numbers and executor cores) from the ````SparkContext````. You can find more information about the initialization in the [Programming Guide](#engine)
 
 After the initialization, we need to:
 
@@ -52,7 +52,7 @@ After the initialization, we need to:
         param.batchSize)
 ```
 
-After that, we _**create the [```Optimizer```](https://github.com/intel-analytics/BigDL/tree/master/spark/dl/src/main/scala/com/intel/analytics/bigdl/optim)**_ (either a distributed or local one depending on whether it runs on Spark or not) by specifying the ````DataSet````, the model and the ````Criterion```` (which, given input and target, computes gradient per given loss function):
+After that, we create the [```Optimizer```](https://github.com/intel-analytics/BigDL/tree/master/spark/dl/src/main/scala/com/intel/analytics/bigdl/optim) (either a distributed or local one depending on whether it runs on Spark or not) by specifying the ````DataSet````, the model and the ````Criterion```` (which, given input and target, computes gradient per given loss function):
 ````scala
   val optimizer = Optimizer(
     model = model,
@@ -60,7 +60,7 @@ After that, we _**create the [```Optimizer```](https://github.com/intel-analytic
     criterion = ClassNLLCriterion[Float]())
 ````
 
-Finally (after optionally specifying the validation data and methods for the ````Optimizer````), we _**train the model by calling ````Optimizer.optimize()````**_:
+Finally (after optionally specifying the validation data and methods for the ````Optimizer````), we train the model by calling ````Optimizer.optimize()````:
 ````scala
   optimizer
     .setValidation(
@@ -72,7 +72,7 @@ Finally (after optionally specifying the validation data and methods for the ```
     .optimize()
 ````
 
-### Text Classification - Working with Spark RDD
+## **Text Classification** - Working with Spark RDD
 This tutorial describes the [text_classification](https://github.com/intel-analytics/BigDL/tree/master/spark/dl/src/main/scala/com/intel/analytics/bigdl/example/textclassification) example, which builds a text classifier using a simple convolutional neural network (CNN) model. (It was first described by [this Keras tutorial](https://blog.keras.io/using-pre-trained-word-embeddings-in-a-keras-model.html)).
 
 After importing ```com.intel.analytics.bigdl._``` and some initialization, the [example](https://github.com/intel-analytics/BigDL/blob/master/spark/dl/src/main/scala/com/intel/analytics/bigdl/example/textclassification/TextClassifier.scala) broadcasts the pre-trained world embedding and loads the input data using RDD transformations:
@@ -119,7 +119,7 @@ After that, the [example](https://github.com/intel-analytics/BigDL/blob/master/s
     .optimize()
 ````
 
-### Image Classification - Working with Spark DataFrame and ML pipeline
+## **Image Classification** - Working with Spark DataFrame and ML pipeline
 This tutorial describes the [image_classification](https://github.com/intel-analytics/BigDL/tree/master/spark/dl/src/main/scala/com/intel/analytics/bigdl/example/imageclassification) example, which loads a BigDL ([Inception](http://arxiv.org/abs/1409.4842)) model or Torch ([Resnet](https://arxiv.org/abs/1512.03385)) model that is trained on [ImageNet](http://image-net.org/download-images) data, and then applies the loaded model to predict the contents of a set of images using BigDL and Spark [ML pipeline](https://spark.apache.org/docs/1.6.3/ml-guide.html).
 
 After importing ```com.intel.analytics.bigdl._``` and some initialization, the [example](https://github.com/intel-analytics/BigDL/blob/master/spark/dl/src/main/scala/com/intel/analytics/bigdl/example/imageclassification/ImagePredictor.scala) first [loads](https://github.com/intel-analytics/BigDL/blob/master/spark/dl/src/main/scala/com/intel/analytics/bigdl/example/imageclassification/MlUtils.scala) the specified model:
@@ -166,4 +166,72 @@ After that, the [example](https://github.com/intel-analytics/BigDL/blob/master/s
       .select("imageName", "predict")
       .show(param.showNum)
 ```
+## **Tutorial: Text Classification using BigDL Python API**  
+
+This tutorial describes the [textclassifier](https://github.com/intel-analytics/BigDL/tree/master/pyspark/dl/models/textclassifier) example written using BigDL Python API, which builds a text classifier using a CNN (convolutional neural network) or LSTM or GRU model (as specified by the user). (It was first described by [this Keras tutorial](https://blog.keras.io/using-pre-trained-word-embeddings-in-a-keras-model.html))
+
+The example first creates the `SparkContext` using the SparkConf` return by the `create_spark_conf()` method, and then initialize the engine:
+```python
+  sc = SparkContext(appName="text_classifier",
+                    conf=create_spark_conf())
+  init_engine()
+```
+
+It then loads the [20 Newsgroup dataset](http://www.cs.cmu.edu/afs/cs.cmu.edu/project/theo-20/www/data/news20.html) into RDD, and transforms the input data into an RDD of `Sample`. (Each `Sample` in essence contains a tuple of two NumPy ndarray representing the feature and label).
+
+```python
+  texts = news20.get_news20()
+  data_rdd = sc.parallelize(texts, 2)
+  ...
+  sample_rdd = vector_rdd.map(
+      lambda (vectors, label): to_sample(vectors, label, embedding_dim))
+  train_rdd, val_rdd = sample_rdd.randomSplit(
+      [training_split, 1-training_split])   
+```
+
+After that, the example creates the neural network model as follows:
+```python
+def build_model(class_num):
+    model = Sequential()
+
+    if model_type.lower() == "cnn":
+        model.add(Reshape([embedding_dim, 1, sequence_len]))
+        model.add(SpatialConvolution(embedding_dim, 128, 5, 1))
+        model.add(ReLU())
+        model.add(SpatialMaxPooling(5, 1, 5, 1))
+        model.add(SpatialConvolution(128, 128, 5, 1))
+        model.add(ReLU())
+        model.add(SpatialMaxPooling(5, 1, 5, 1))
+        model.add(Reshape([128]))
+    elif model_type.lower() == "lstm":
+        model.add(Recurrent()
+                  .add(LSTM(embedding_dim, 128)))
+        model.add(Select(2, -1))
+    elif model_type.lower() == "gru":
+        model.add(Recurrent()
+                  .add(GRU(embedding_dim, 128)))
+        model.add(Select(2, -1))
+    else:
+        raise ValueError('model can only be cnn, lstm, or gru')
+
+    model.add(Linear(128, 100))
+    model.add(Linear(100, class_num))
+    model.add(LogSoftMax())
+    return model
+```
+Finally the example creates the `Optimizer` (which accepts both the model and the training Sample RDD) and trains the model by calling `Optimizer.optimize()`:
+
+```python
+optimizer = Optimizer(
+    model=build_model(news20.CLASS_NUM),
+    training_rdd=train_rdd,
+    criterion=ClassNLLCriterion(),
+    end_trigger=MaxEpoch(max_epoch),
+    batch_size=batch_size,
+    optim_method="Adagrad",
+    state=state)
+...
+train_model = optimizer.optimize()
+```
+
 ---

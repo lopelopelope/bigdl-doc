@@ -1,4 +1,5 @@
-## Building
+# **Build**
+
 This page shows how to install and build BigDL (on both Linux and macOS), including:
   
 
@@ -17,7 +18,7 @@ This page shows how to install and build BigDL (on both Linux and macOS), includ
 * [IDE Settings](#ide-settings)
 * [Next Steps](#next-steps)
 
-### Linking
+## **Linking**
 
 Currently, BigDL is host on maven central, here's an example to add the dependency to your own project:
 ```xml
@@ -31,7 +32,7 @@ SBT developers can use
 ```sbt
 libraryDependencies += "com.intel.analytics.bigdl" % "bigdl" % "0.1.0"
 ```
-**Note**: the BigDL lib default supports Spark 1.5.x and 1.6.x; if your project runs on Spark 2.0 and 2.1, use this
+*Note*: the BigDL lib default supports Spark 1.5.x and 1.6.x; if your project runs on Spark 2.0 and 2.1, use this
 ```xml
 <dependency>
     <groupId>com.intel.analytics.bigdl</groupId>
@@ -60,14 +61,14 @@ SBT developers can use
 ```sbt
 libraryDependencies += "com.intel.analytics.bigdl" % "bigdl-SPARK_2.0" % "0.1.0"
 ```
-### Download
+## **Download**
 BigDL source code is available at [GitHub](https://github.com/intel-analytics/BigDL)
 
 ```sbt
 $ git clone https://github.com/intel-analytics/BigDL.git
 ```
 
-### Build
+## **Build**
 Maven 3 is needed to build BigDL, you can download it from the [maven website](https://maven.apache.org/download.cgi). 
 
 After installing Maven 3, please set the environment variable MAVEN_OPTS as follows:
@@ -76,7 +77,9 @@ $ export MAVEN_OPTS="-Xmx2g -XX:ReservedCodeCacheSize=512m"
 ```
 When compiling with Java 7, you need to add the option “-XX:MaxPermSize=1G”. 
 
-#### Build with `make-dist.sh` 
+### **Build with `make-dist.sh`** 
+
+#### **Using the [make-dist.sh](https://github.com/intel-analytics/BigDL/blob/master/make-dist.sh) script**
 It is highly recommended that you build BigDL using the [make-dist.sh](https://github.com/intel-analytics/BigDL/blob/master/make-dist.sh).
 
 Once downloaded, you can build BigDL with the following commands:
@@ -85,22 +88,25 @@ $ bash make-dist.sh
 ```
 After that, you can find a `dist` folder, which contains all the needed files to run a BigDL program. The files in `dist` include:  
 
- * **dist/bin/bigdl.sh**: A script used to set up proper environment variables and launch the BigDL program.
- * **dist/lib/bigdl-VERSION-jar-with-dependencies.jar**: This jar package contains all dependencies except Spark.
+ * dist/bin/bigdl.sh: A script used to set up proper environment variables and launch the BigDL program.
+ * dist/lib/bigdl-VERSION-jar-with-dependencies.jar: This jar package contains all dependencies except Spark.
 
-##### Build for macOS
+#### **Build for macOS**
 The instructions above will only build for Linux. To build BigDL for macOS, pass `-P mac` to the `make-dist.sh` script as follows:
-```{r, engine='sh'}
+
+```sbt
 $ bash make-dist.sh -P mac
 ```
-##### Build for Spark 2.0
+
+#### **Build for Spark 2.0**
 The instructions above will build BigDL with Spark 1.5.x or 1.6.x (using Scala 2.10); to build for Spark 2.0 (which uses Scala 2.11 by default), pass `-P spark_2.0` to the `make-dist.sh` script:
+
 ```sbt
 $ bash make-dist.sh -P spark_2.0
 ```
 It is highly recommended to use _**Java 8**_ when running with Spark 2.0; otherwise you may observe very poor performance.
 
-##### Build for Spark 2.1
+#### Build for Spark 2.1
 The instructions above will build BigDL with Spark 1.5.x or 1.6.x or spark 2.0; to build for Spark 2.1 (which uses Scala 2.11 by default), pass `-P spark_2.1` to the `make-dist.sh` script:
 ```sbt
 $ bash make-dist.sh -P spark_2.1
@@ -108,7 +114,7 @@ $ bash make-dist.sh -P spark_2.1
 
 It is highly recommended to use _**Java 8**_ when running with Spark 2.x; otherwise you may observe very poor performance.
 
-##### Build for Cloudera Distributed Spark
+#### **Build for Cloudera Distributed Spark**
 The instructions above will build BigDL with Spark2-2.0.0-cloudera2 and cdh5-1.6.0_* ; to build for Spark2-2.0.0-cloudera2 (which uses Scala 2.11 by default), pass `-P cloudera` to the `make-dist.sh` script:
 ```sbt
 $ bash make-dist.sh -P cloudera
@@ -117,10 +123,10 @@ To build for cdh5-1.6.0_*(which uses Scala 2.10 by default) with the following c
 ```sbt
 $ bash make-dist.sh
 ```
-##### Build using Scala 2.10 or 2.11
+#### **Build using Scala 2.10 or 2.11**
 By default, `make-dist.sh` uses Scala 2.10 for Spark 1.5.x or 1.6.x, and Scala 2.11 for Spark 2.0. To override the default behaviors, you can pass `-P scala_2.10` or `-P scala_2.11` to `make-dist.sh` as appropriate.
 
-##### Full Build
+#### **Full Build**
 
 Note that the instructions above will skip the build of native library code, and pull the corresponding libraries from Maven Central. If you want to build the the native library code by yourself, follow the steps below:
 
@@ -132,6 +138,7 @@ Note that the instructions above will skip the build of native library code, and
     $ source PATH_TO_MKL/bin/mklvars.sh intel64
 ```
 where the `PATH_TO_MKL` is the installation directory of the MKL.  
+
 3. Full build  
 Clone BidDL as follows:  
 ```sbt
@@ -149,7 +156,7 @@ Otherwise, only pass `-P full-build` to the `make-dist.sh` script:
 ```sbt
    $ bash make-dist.sh -P full-build
 ```
-#### Build with Maven
+### **Build with Maven**
 To build BigDL directly using Maven, run the command below:
 
 ```sbt
@@ -164,7 +171,7 @@ Note that the instructions above will build BigDL with Spark 1.5.x or 1.6.x (usi
  * `-P full-build`: full build
  * `-P scala_2.10` (or `-P scala_2.11`): build using Scala 2.10 (or Scala 2.11) 
 
-#### IDE Settings
+## **IDE Settings**
 We set the scope of spark related library to `provided` in pom.xml. The reason is that we don't want package spark related jars which will make bigdl a huge jar, and generally as bigdl is invoked by spark-submit, these dependencies will be provided by spark at run-time.
 
 This will cause a problem in IDE. When you run applications, it will throw `NoClassDefFoundError` because the library scope is `provided`.
@@ -173,8 +180,7 @@ You can easily change the scopes by the `all-in-one` profile.
 
 * In Intellij, go to View -> Tools Windows -> Maven Projects. Then in the Maven Projects panel, Profiles -> click "all-in-one". 
 
-#### Next Steps
-* To learn how to run BigDL programs (as either a local Java program or a Spark program), you can check out the [Getting Started Page][Getting-Started].
-* To learn the details of Python support in BigDL, you can check out the [Python Support Page](https://github.com/intel-analytics/BigDL/wiki/Python-Support)
+## **Next Steps**
+* To learn how to run BigDL programs (as either a local Java program or a Spark program), you can check out the [Getting Started Page](#getting-started).
+* To learn the details of Python support in BigDL, you can check out the [Python Support Page](#python-support)
 ---
-[getting-started]: gettingstarted

@@ -1,4 +1,4 @@
-# Getting Started
+# **Getting Started**
 
 This page shows how to run a BigDL program, including  
 
@@ -7,17 +7,17 @@ This page shows how to run a BigDL program, including
 * [Spark Program](#spark-program)
 * [Next Steps](#next-steps)
 
-### Before running a BigDL program
+## **Before running a BigDL program**
 Before running a BigDL program, you need to set proper environment variables first.
 
-#### Setting Environment Variables.
+### **Setting Environment Variables**
 To achieve high performance, BigDL uses Intel MKL and multi-threaded programming; therefore, you need to first set the environment variables by running the provided script in `PATH_To_BigDL/bin/bigdl.sh` as follows:
 ```sbt
 $ source PATH_To_BigDL/bin/bigdl.sh
 ```
 Alternatively, you can also use the `PATH_To_BigDL/bin/bigdl.sh` script to launch your BigDL program; see the details below.
 
-### Interactive Spark shell
+## **Interactive Spark shell**
 You can quickly experiment with BigDL codes as a Spark program using the interactive Spark shell by running:
 ```sbt
 $ source PATH_To_BigDL/bin/bigdl.sh
@@ -49,9 +49,9 @@ res9: com.intel.analytics.bigdl.tensor.Tensor[Double] =
 1.0     1.0
 [com.intel.analytics.bigdl.tensor.DenseTensor of size 2x2]
 ```
-For more details about the BigDL APIs, please refer to the [Programming Guide](https://github.com/intel-analytics/BigDL/wiki/Programming-Guide).
+For more details about the BigDL APIs, please refer to the [Programming Guide](#Programming-Guide).
 
-### Spark Program  
+## **Spark Program**  
 
 You can run a BigDL program, e.g., the [VGG](https://github.com/intel-analytics/BigDL/tree/master/spark/dl/src/main/scala/com/intel/analytics/bigdl/models/vgg) training, as a standard Spark program (running in either local mode or cluster mode) as follows:
 
@@ -93,10 +93,9 @@ You can run a BigDL program, e.g., the [VGG](https://github.com/intel-analytics/
 
   * -b: The mini-batch size. The mini-batch size is expected to be a multiple of **total cores** used in the job. In this example, the mini-batch size is suggested to be set to **total cores * 4**
 
-### Next Steps
-* To learn the details of Python support in BigDL, you can check out the [Python Support Page](https://github.com/intel-analytics/BigDL/wiki/Python-Support)
-* To learn how to create practical neural networks using BigDL in a couple of minutes, you can check out the [Tutorials Page](https://github.com/intel-analytics/BigDL/wiki/Tutorials)
+## **Next Steps**
+* To learn the details of Python support in BigDL, you can check out the [Python Support Page](#Python-Support)
+* To learn how to create practical neural networks using BigDL in a couple of minutes, you can check out the [Tutorials Page](#tutorials)
 * You can check out the [Document Page](https://github.com/intel-analytics/BigDL/wiki/Documents) for more details (including Tutorials, Examples, Programming Guide, etc.)
 * You can join the [BigDL Google Group](https://groups.google.com/forum/#!forum/bigdl-user-group) (or subscribe to the [mail list](mailto:bigdl-user-group+subscribe@googlegroups.com)) for more questions and discussions on BigDL
 * You can post bug reports and feature requests at the [Issue Page](https://github.com/intel-analytics/BigDL/issues)
----  
