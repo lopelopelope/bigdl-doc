@@ -8,8 +8,8 @@
     
     <title>optim package &#8212; PySpark master documentation</title>
     
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -21,9 +21,9 @@
         SOURCELINK_SUFFIX: '.txt'
       };
     </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="util package" href="util.html" />
@@ -63,7 +63,7 @@
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/optim.rst.txt"
+      <li><a href="sources/optim.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -94,7 +94,7 @@
 <span id="optim-optimizer-module"></span><h2>optim.optimizer module<a class="headerlink" href="#module-optim.optimizer" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="optim.optimizer.EveryEpoch">
-<em class="property">class </em><code class="descclassname">optim.optimizer.</code><code class="descname">EveryEpoch</code><span class="sig-paren">(</span><em>bigdl_type='float'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/optim/optimizer.html#EveryEpoch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.EveryEpoch" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">optim.optimizer.</code><code class="descname">EveryEpoch</code><span class="sig-paren">(</span><em>bigdl_type='float'</em><span class="sig-paren">)</span><a class="reference internal" href="modules/optim/optimizer.html#EveryEpoch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.EveryEpoch" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="util.html#util.common.JavaValue" title="util.common.JavaValue"><code class="xref py py-class docutils literal"><span class="pre">util.common.JavaValue</span></code></a></p>
 <p>A trigger specifies a timespot or several timespots during training,
 and a corresponding action will be taken when the timespot(s) is reached.
@@ -109,7 +109,7 @@ and also in TrainSummary.set_summary_trigger.</p>
 
 <dl class="class">
 <dt id="optim.optimizer.MaxEpoch">
-<em class="property">class </em><code class="descclassname">optim.optimizer.</code><code class="descname">MaxEpoch</code><span class="sig-paren">(</span><em>max_epoch</em>, <em>bigdl_type='float'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/optim/optimizer.html#MaxEpoch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.MaxEpoch" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">optim.optimizer.</code><code class="descname">MaxEpoch</code><span class="sig-paren">(</span><em>max_epoch</em>, <em>bigdl_type='float'</em><span class="sig-paren">)</span><a class="reference internal" href="modules/optim/optimizer.html#MaxEpoch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.MaxEpoch" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="util.html#util.common.JavaValue" title="util.common.JavaValue"><code class="xref py py-class docutils literal"><span class="pre">util.common.JavaValue</span></code></a></p>
 <p>A trigger specifies a timespot or several timespots during training,
 and a corresponding action will be taken when the timespot(s) is reached.
@@ -124,7 +124,7 @@ Usually used as end_trigger when creating an Optimizer.</p>
 
 <dl class="class">
 <dt id="optim.optimizer.MaxIteration">
-<em class="property">class </em><code class="descclassname">optim.optimizer.</code><code class="descname">MaxIteration</code><span class="sig-paren">(</span><em>max</em>, <em>bigdl_type='float'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/optim/optimizer.html#MaxIteration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.MaxIteration" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">optim.optimizer.</code><code class="descname">MaxIteration</code><span class="sig-paren">(</span><em>max</em>, <em>bigdl_type='float'</em><span class="sig-paren">)</span><a class="reference internal" href="modules/optim/optimizer.html#MaxIteration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.MaxIteration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="util.html#util.common.JavaValue" title="util.common.JavaValue"><code class="xref py py-class docutils literal"><span class="pre">util.common.JavaValue</span></code></a></p>
 <p>A trigger specifies a timespot or several timespots during training, 
 and a corresponding action will be taken when the timespot(s) is reached.  
@@ -139,7 +139,7 @@ Usually used as end_trigger when creating an Optimizer.</p>
 
 <dl class="class">
 <dt id="optim.optimizer.Optimizer">
-<em class="property">class </em><code class="descclassname">optim.optimizer.</code><code class="descname">Optimizer</code><span class="sig-paren">(</span><em>model</em>, <em>training_rdd</em>, <em>criterion</em>, <em>end_trigger</em>, <em>batch_size</em>, <em>optim_method='SGD'</em>, <em>state={}</em>, <em>bigdl_type='float'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/optim/optimizer.html#Optimizer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.Optimizer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">optim.optimizer.</code><code class="descname">Optimizer</code><span class="sig-paren">(</span><em>model</em>, <em>training_rdd</em>, <em>criterion</em>, <em>end_trigger</em>, <em>batch_size</em>, <em>optim_method='SGD'</em>, <em>state={}</em>, <em>bigdl_type='float'</em><span class="sig-paren">)</span><a class="reference internal" href="modules/optim/optimizer.html#Optimizer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.Optimizer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="util.html#util.common.JavaValue" title="util.common.JavaValue"><code class="xref py py-class docutils literal"><span class="pre">util.common.JavaValue</span></code></a></p>
 <p>An optimizer is in general to minimize any function with respect 
 to a set of parameters. In case of training a neural network, 
@@ -147,13 +147,13 @@ an optimizer tries to minimize the loss of the neural net with
 respect to its weights/biases, over the training set.</p>
 <dl class="method">
 <dt id="optim.optimizer.Optimizer.optimize">
-<code class="descname">optimize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/optim/optimizer.html#Optimizer.optimize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.Optimizer.optimize" title="Permalink to this definition">¶</a></dt>
+<code class="descname">optimize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="modules/optim/optimizer.html#Optimizer.optimize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.Optimizer.optimize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Do an optimization.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="optim.optimizer.Optimizer.set_train_summary">
-<code class="descname">set_train_summary</code><span class="sig-paren">(</span><em>summary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/optim/optimizer.html#Optimizer.set_train_summary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.Optimizer.set_train_summary" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_train_summary</code><span class="sig-paren">(</span><em>summary</em><span class="sig-paren">)</span><a class="reference internal" href="modules/optim/optimizer.html#Optimizer.set_train_summary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.Optimizer.set_train_summary" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set train summary. A TrainSummary object contains information 
 necesary for the optimizer to know how often the logs are recorded, 
 where to store the logs and how to retrieve them, etc. For details, 
@@ -170,7 +170,7 @@ refer to the docs of TrainSummary.</p>
 
 <dl class="method">
 <dt id="optim.optimizer.Optimizer.set_val_summary">
-<code class="descname">set_val_summary</code><span class="sig-paren">(</span><em>summary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/optim/optimizer.html#Optimizer.set_val_summary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.Optimizer.set_val_summary" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_val_summary</code><span class="sig-paren">(</span><em>summary</em><span class="sig-paren">)</span><a class="reference internal" href="modules/optim/optimizer.html#Optimizer.set_val_summary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.Optimizer.set_val_summary" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set validation summary. A ValidationSummary object contains information 
 necesary for the optimizer to know how often the logs are recorded, 
 where to store the logs and how to retrieve them, etc. For details, 
@@ -187,7 +187,7 @@ refer to the docs of ValidationSummary.</p>
 
 <dl class="method">
 <dt id="optim.optimizer.Optimizer.setcheckpoint">
-<code class="descname">setcheckpoint</code><span class="sig-paren">(</span><em>checkpoint_trigger</em>, <em>checkpoint_path</em>, <em>isOverWrite=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/optim/optimizer.html#Optimizer.setcheckpoint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.Optimizer.setcheckpoint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">setcheckpoint</code><span class="sig-paren">(</span><em>checkpoint_trigger</em>, <em>checkpoint_path</em>, <em>isOverWrite=True</em><span class="sig-paren">)</span><a class="reference internal" href="modules/optim/optimizer.html#Optimizer.setcheckpoint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.Optimizer.setcheckpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configure checkpoint settings.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -206,7 +206,7 @@ refer to the docs of ValidationSummary.</p>
 
 <dl class="method">
 <dt id="optim.optimizer.Optimizer.setvalidation">
-<code class="descname">setvalidation</code><span class="sig-paren">(</span><em>batch_size, val_rdd, trigger, val_method=['Top1Accuracy']</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/optim/optimizer.html#Optimizer.setvalidation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.Optimizer.setvalidation" title="Permalink to this definition">¶</a></dt>
+<code class="descname">setvalidation</code><span class="sig-paren">(</span><em>batch_size, val_rdd, trigger, val_method=['Top1Accuracy']</em><span class="sig-paren">)</span><a class="reference internal" href="modules/optim/optimizer.html#Optimizer.setvalidation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.Optimizer.setvalidation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configure validation settings.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -228,7 +228,7 @@ refer to the docs of ValidationSummary.</p>
 
 <dl class="class">
 <dt id="optim.optimizer.Poly">
-<em class="property">class </em><code class="descclassname">optim.optimizer.</code><code class="descname">Poly</code><span class="sig-paren">(</span><em>power</em>, <em>max_iteration</em>, <em>bigdl_type='float'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/optim/optimizer.html#Poly"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.Poly" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">optim.optimizer.</code><code class="descname">Poly</code><span class="sig-paren">(</span><em>power</em>, <em>max_iteration</em>, <em>bigdl_type='float'</em><span class="sig-paren">)</span><a class="reference internal" href="modules/optim/optimizer.html#Poly"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.Poly" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="util.html#util.common.JavaValue" title="util.common.JavaValue"><code class="xref py py-class docutils literal"><span class="pre">util.common.JavaValue</span></code></a></p>
 <p>A learning rate decay policy, where the effective learning rate 
 follows a polynomial decay, to be zero by the max_iteration. 
@@ -253,7 +253,7 @@ Calculation: base_lr (1 - iter/max_iteration) ^ (power)</p>
 
 <dl class="class">
 <dt id="optim.optimizer.SeveralIteration">
-<em class="property">class </em><code class="descclassname">optim.optimizer.</code><code class="descname">SeveralIteration</code><span class="sig-paren">(</span><em>interval</em>, <em>bigdl_type='float'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/optim/optimizer.html#SeveralIteration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.SeveralIteration" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">optim.optimizer.</code><code class="descname">SeveralIteration</code><span class="sig-paren">(</span><em>interval</em>, <em>bigdl_type='float'</em><span class="sig-paren">)</span><a class="reference internal" href="modules/optim/optimizer.html#SeveralIteration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.SeveralIteration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="util.html#util.common.JavaValue" title="util.common.JavaValue"><code class="xref py py-class docutils literal"><span class="pre">util.common.JavaValue</span></code></a></p>
 <p>A trigger specifies a timespot or several timespots during training,
 and a corresponding action will be taken when the timespot(s) is reached.
@@ -269,7 +269,7 @@ and also in TrainSummary.set_summary_trigger.</p>
 
 <dl class="class">
 <dt id="optim.optimizer.Step">
-<em class="property">class </em><code class="descclassname">optim.optimizer.</code><code class="descname">Step</code><span class="sig-paren">(</span><em>step_size</em>, <em>gamma</em>, <em>bigdl_type='float'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/optim/optimizer.html#Step"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.Step" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">optim.optimizer.</code><code class="descname">Step</code><span class="sig-paren">(</span><em>step_size</em>, <em>gamma</em>, <em>bigdl_type='float'</em><span class="sig-paren">)</span><a class="reference internal" href="modules/optim/optimizer.html#Step"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.Step" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="util.html#util.common.JavaValue" title="util.common.JavaValue"><code class="xref py py-class docutils literal"><span class="pre">util.common.JavaValue</span></code></a></p>
 <p>A learning rate decay policy, where the effective learning rate is 
 calculated as base_lr * gamma ^ (floor(iter / step_size))</p>
@@ -293,7 +293,7 @@ calculated as base_lr * gamma ^ (floor(iter / step_size))</p>
 
 <dl class="class">
 <dt id="optim.optimizer.TrainSummary">
-<em class="property">class </em><code class="descclassname">optim.optimizer.</code><code class="descname">TrainSummary</code><span class="sig-paren">(</span><em>log_dir</em>, <em>app_name</em>, <em>bigdl_type='float'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/optim/optimizer.html#TrainSummary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.TrainSummary" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">optim.optimizer.</code><code class="descname">TrainSummary</code><span class="sig-paren">(</span><em>log_dir</em>, <em>app_name</em>, <em>bigdl_type='float'</em><span class="sig-paren">)</span><a class="reference internal" href="modules/optim/optimizer.html#TrainSummary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.TrainSummary" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="util.html#util.common.JavaValue" title="util.common.JavaValue"><code class="xref py py-class docutils literal"><span class="pre">util.common.JavaValue</span></code></a></p>
 <p>A logging facility which allows user to trace how indicators (e.g. 
 learning rate, training loss, throughput, etc.) change with iterations/time 
@@ -307,7 +307,7 @@ such as matplotlib (in notebook, etc.).</p>
 <p>Use optimizer.setTrainSummary to enable train logger.</p>
 <dl class="method">
 <dt id="optim.optimizer.TrainSummary.read_scalar">
-<code class="descname">read_scalar</code><span class="sig-paren">(</span><em>tag</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/optim/optimizer.html#TrainSummary.read_scalar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.TrainSummary.read_scalar" title="Permalink to this definition">¶</a></dt>
+<code class="descname">read_scalar</code><span class="sig-paren">(</span><em>tag</em><span class="sig-paren">)</span><a class="reference internal" href="modules/optim/optimizer.html#TrainSummary.read_scalar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.TrainSummary.read_scalar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve train logs by type. Return an array of records in the format 
 (step,value,wallClockTime). - &#8220;Step&#8221; is the iteration count by default.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -322,7 +322,7 @@ such as matplotlib (in notebook, etc.).</p>
 
 <dl class="method">
 <dt id="optim.optimizer.TrainSummary.set_summary_trigger">
-<code class="descname">set_summary_trigger</code><span class="sig-paren">(</span><em>name</em>, <em>trigger</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/optim/optimizer.html#TrainSummary.set_summary_trigger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.TrainSummary.set_summary_trigger" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_summary_trigger</code><span class="sig-paren">(</span><em>name</em>, <em>trigger</em><span class="sig-paren">)</span><a class="reference internal" href="modules/optim/optimizer.html#TrainSummary.set_summary_trigger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.TrainSummary.set_summary_trigger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the interval of recording for each indicator.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -342,7 +342,7 @@ such as matplotlib (in notebook, etc.).</p>
 
 <dl class="class">
 <dt id="optim.optimizer.ValidationSummary">
-<em class="property">class </em><code class="descclassname">optim.optimizer.</code><code class="descname">ValidationSummary</code><span class="sig-paren">(</span><em>log_dir</em>, <em>app_name</em>, <em>bigdl_type='float'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/optim/optimizer.html#ValidationSummary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.ValidationSummary" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">optim.optimizer.</code><code class="descname">ValidationSummary</code><span class="sig-paren">(</span><em>log_dir</em>, <em>app_name</em>, <em>bigdl_type='float'</em><span class="sig-paren">)</span><a class="reference internal" href="modules/optim/optimizer.html#ValidationSummary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.ValidationSummary" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="util.html#util.common.JavaValue" title="util.common.JavaValue"><code class="xref py py-class docutils literal"><span class="pre">util.common.JavaValue</span></code></a></p>
 <p>A logging facility which allows user to trace how indicators (e.g. 
 validation loss, top1 accuray, top5 accuracy etc.) change with 
@@ -357,7 +357,7 @@ and visualized using python libraries such as matplotlib
 <p>Use optimizer.setValidationSummary to enable validation logger.</p>
 <dl class="method">
 <dt id="optim.optimizer.ValidationSummary.read_scalar">
-<code class="descname">read_scalar</code><span class="sig-paren">(</span><em>tag</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/optim/optimizer.html#ValidationSummary.read_scalar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.ValidationSummary.read_scalar" title="Permalink to this definition">¶</a></dt>
+<code class="descname">read_scalar</code><span class="sig-paren">(</span><em>tag</em><span class="sig-paren">)</span><a class="reference internal" href="modules/optim/optimizer.html#ValidationSummary.read_scalar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optim.optimizer.ValidationSummary.read_scalar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve validation logs by type. Return an array of records in the 
 format (step,value,wallClockTime). - &#8220;Step&#8221; is the iteration count 
 by default.</p>
