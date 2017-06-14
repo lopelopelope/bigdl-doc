@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <lastmod>2017-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,7 +12,7 @@
     
     <url>
      <loc>/release/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <lastmod>2017-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -20,32 +20,50 @@
     
         
     <url>
-     <loc>/build/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <loc>/userguide/build/</loc>
+     <lastmod>2017-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/getting-started/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <loc>/userguide/getting-started/</loc>
+     <lastmod>2017-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/tutorials/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <loc>/userguide/examples/</loc>
+     <lastmod>2017-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/visualization-with-tensorboard/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <loc>/userguide/visualization-with-tensorboard/</loc>
+     <lastmod>2017-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/running-on-EC2/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <loc>/userguide/running-on-EC2/</loc>
+     <lastmod>2017-06-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/userguide/models/</loc>
+     <lastmod>2017-06-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/userguide/programming-guide/</loc>
+     <lastmod>2017-06-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/userguide/faq/</loc>
+     <lastmod>2017-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -54,63 +72,39 @@
     
         
     <url>
-     <loc>/examples/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <loc>/PythonSupport/python-support/</loc>
+     <lastmod>2017-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/programming-guide/</loc>
-     <lastmod>2017-06-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-    <url>
-     <loc>/python-support/</loc>
-     <lastmod>2017-06-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-        
-    <url>
-     <loc>/javadoc/</loc>
-     <lastmod>2017-06-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/python-api-doc/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <loc>/PythonSupport/Python-turtorial/</loc>
+     <lastmod>2017-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     
 
     
+        
     <url>
-     <loc>/faq/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <loc>/APIdocs/scaladoc/</loc>
+     <lastmod>2017-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
+    <url>
+     <loc>/APIdocs/python-api-doc/</loc>
+     <lastmod>2017-06-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
     <url>
      <loc>/powered-by/</loc>
-     <lastmod>2017-06-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>/support/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <lastmod>2017-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
