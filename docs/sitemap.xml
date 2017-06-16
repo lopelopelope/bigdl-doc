@@ -20,49 +20,49 @@
     
         
     <url>
-     <loc>/userguide/build/</loc>
+     <loc>/UserGuide/build/</loc>
      <lastmod>2017-06-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/userguide/getting-started/</loc>
+     <loc>/UserGuide/getting-started/</loc>
      <lastmod>2017-06-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/userguide/examples/</loc>
+     <loc>/UserGuide/examples/</loc>
      <lastmod>2017-06-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/userguide/visualization-with-tensorboard/</loc>
+     <loc>/UserGuide/visualization-with-tensorboard/</loc>
      <lastmod>2017-06-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/userguide/running-on-EC2/</loc>
+     <loc>/UserGuide/running-on-EC2/</loc>
      <lastmod>2017-06-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/userguide/models/</loc>
+     <loc>/UserGuide/models/</loc>
      <lastmod>2017-06-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/userguide/programming-guide/</loc>
+     <loc>/UserGuide/programming-guide/</loc>
      <lastmod>2017-06-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/userguide/faq/</loc>
+     <loc>/UserGuide/faq/</loc>
      <lastmod>2017-06-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
