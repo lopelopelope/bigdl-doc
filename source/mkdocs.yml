@@ -1,33 +1,28 @@
-site_name: BigDL Doc Website
-theme: material
-#theme: readthedocs
-repo_name: 'GitHub'
+site_name: BigDL Project
+extra_css: [extra.css]
+theme: readthedocs
+repo_name: 'GitHub '
 repo_url: 'https://github.com/intel-analytics/BigDL'
-edit_uri: 'docs/source/docs'
+
 
 pages:
 - Home: index.md 
 - Release: release.md
 - User Guide:
-  - Build: build.md
-  - Getting Started: getting-started.md
-  - Turtorial: tutorials.md
-  - Visualization With Tensorboard: visualization-with-tensorboard.md
-  - Running on EC2: running-on-EC2.md
-- Developer Guide: 
-  - Examples: examples.md
-  - Programming Guide: programming-guide.md
-  - Python Support: python-support.md
+  - Build: userguide/build.md
+  - Getting Started: userguide/getting-started.md
+  - Examples: userguide/examples.md
+  - Visualization With Tensorboard: userguide/visualization-with-tensorboard.md
+  - Running On EC2: userguide/running-on-EC2.md
+  - Models: userguide/models.md
+  - Programming Guide: userguide/programming-guide.md
+  - FAQ: userguide/faq.md
+- Python Support: 
+  - Python Support: PythonSupport/python-support.md
+  - Python Tutorial: PythonSupport/Python-turtorial.md
 - API Docs:
-  - Scala Docs: javadoc.md
-  - Python API Docs: python-api-doc.md
-- Known Issues: known-issues.md
+  - Scala Docs: APIdocs/scaladoc.md
+  - Python API Docs: APIdocs/python-api-doc.md
+  
 - Powered by: powered-by.md
-- Support: support.md
-
-extra:
-  font:
-    text: 'Ubuntu'
-    code: 'Ubuntu Mono'
-
 
