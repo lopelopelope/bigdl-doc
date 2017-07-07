@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Optimizer - BigDL Project</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/highlight.css">
+  <link href="../../../extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Optimizer";
+    var mkdocs_page_input_path = "APIdocs/Optimizers/Optimizer.md";
+    var mkdocs_page_url = "/APIdocs/Optimizers/Optimizer/";
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> BigDL Project</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../../release/">Release</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User Guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../UserGuide/build/">Build</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../UserGuide/getting-started/">Getting Started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../UserGuide/examples/">Examples</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../UserGuide/visualization-with-tensorboard/">Visualization With Tensorboard</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../UserGuide/running-on-EC2/">Running On EC2</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../UserGuide/models/">Models</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../UserGuide/programming-guide/">Programming Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../UserGuide/known-issues/">Known Issues</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Python Support</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../PythonSupport/Install-via-pip/">Install via pip</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../PythonSupport/python-support/">Python Support</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../PythonSupport/python-turtorial/">Python Tutorial</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">API Docs</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../scaladoc/">Scala Docs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../python-api-doc/">Python API Docs</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Model</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Model/SequentialModel/">Sequential Model</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Model/FunctionalAPI/">Functional API</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Layers</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Layers/Containers/_merged_Containers/">Containers</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Layers/Simple_Layers/_merged_Simple_Layers/">Simple Layers</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Layers/Convolution_Layers/_merged_Convolution_Layers/">Convolution Layers</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Layers/Pooling_Layers/_merged_Pooling_Layers/">Pooling Layers</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Layers/Linear_Layers/_merged_Linear_Layers/">Linear Layers</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Layers/Non-linear_Activations/_merged_Non-linear_Activations/">Non-linear Activations</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Layers/Embedding_Layers/_merged_Embedding_Layers/">Embedding Layers</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Layers/MergeSplit_Layers/_merged_MergeSplit_Layers/">Merge/Split Layers</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Layers/Math_Layers/_merged_Math_Layers/">Math Layers</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Layers/Padding_Layers/_merged_Padding_Layers/">Padding Layers</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Layers/Normalization_Layers/_merged_Normalization_Layers/">Normalization Layers</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Layers/Dropout_Layers/_merged_Dropout_Layers/">Dropout Layers</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Layers/Distance_Layers/_merged_Distance_Layers/">Distance Layers</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Layers/Recurrent_Layers/_merged_Recurrent_Layers/">Recurrent Layers</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Layers/Utilities/_merged_Utilities/">Utilities</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Losses/_merged_Losses/">Losses</a>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Optimizers</span>
+    <ul class="subnav">
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="./">Optimizer</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#optimizer">Optimizer</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#scala-api">Scala API</a></li>
+        
+            <li><a class="toctree-l5" href="#scala-example">Scala example</a></li>
+        
+            <li><a class="toctree-l5" href="#python-api">Python API</a></li>
+        
+            <li><a class="toctree-l5" href="#python-example">Python example</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../DistriOptimizer/">DistriOptimizer</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Optim_Methods/_merged_Optim_Methods/">Optim Methods</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Triggers/">Triggers</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Initializers/_merged_Initializers/">Initalizers</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Regularizers/_merged_Regularizers/">Regularizers</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Metrics/_merged_Metrics/">Metrics</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../../powered-by/">Powered by</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">BigDL Project</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Latest Docs</a> &raquo;</li>
+    
+      
+        
+          <li>API Docs &raquo;</li>
+        
+      
+        
+          <li>Optimizers &raquo;</li>
+        
+      
+    
+    <li>Optimizer</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/intel-analytics/BigDL/"> Fork on GitHub </a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="optimizer">Optimizer</h2>
+<p>An optimizer is in general to minimize any function with respect to a set of parameters. In case of training a neural network, an optimizer tries to minimize the loss of the neural net with respect to its weights/biases, over the training set.</p>
+<h3 id="scala-api">Scala API</h3>
+<p><strong><em>Factory method</em></strong></p>
+<pre><code class="scala">val optimizer = Opimizer[T: ClassTag](
+  model: Module[T],
+  sampleRDD: RDD[Sample[T]],
+  criterion: Criterion[T],
+  batchSize: Int)
+</code></pre>
+
+<p><code>T</code>: the numeric type(Float/Double).<br />
+<code>model</code>: the model will be optimized.<br />
+<code>sampleRDD</code>: an RDD of training Sample.<br />
+<code>criterion</code>: the Loss function.<br />
+<code>batchSize</code>: size of minibatch. </p>
+<pre><code class="scala">val optimizer = Opimizer[T: ClassTag, D](
+  model: Module[T],
+  dataset: DataSet[D],
+  criterion: Criterion[T])
+</code></pre>
+
+<p><code>T</code>: the numeric type(Float/Double).<br />
+<code>D</code>: should be a kind of MiniBatch.<br />
+<code>model</code>: the model will be optimized.<br />
+<code>dataset</code>: the training DataSet.<br />
+<code>criterion</code>: the Loss function.</p>
+<p><strong><em>Validation</em></strong></p>
+<p>Function setValidation is to set a validate evaluation in the <code>optimizer</code>.</p>
+<pre><code class="scala">optimizer.setValidation(
+  trigger: Trigger,
+  dataset: DataSet[MiniBatch[T]],
+  vMethods : Array[ValidationMethod[T])
+</code></pre>
+
+<p><code>trigger</code>: how often to evaluation validation set.<br />
+<code>dataset</code>: validate data set in type of DataSet[MiniBatch].<br />
+<code>vMethods</code>: a set of ValidationMethod.<br />
+ <br></p>
+<pre><code class="scala">optimizer.setValidation(
+  trigger: Trigger,
+  sampleRDD: RDD[Sample[T]],
+  vMethods: Array[ValidationMethod[T]],
+  batchSize: Int)
+</code></pre>
+
+<p><code>trigger</code>: how often to evaluation validation set.<br />
+<code>sampleRDD</code>: validate data set in type of RDD[Sample].<br />
+<code>vMethods</code>: a set of ValidationMethod.<br />
+<code>batchSize</code>: size of mini batch.</p>
+<p><strong><em>Checkpoint</em></strong></p>
+<pre><code class="scala">optimizer.setCheckpoint(path: String, trigger: Trigger)
+</code></pre>
+
+<p>Function setCheckPoint is used to set a check point saved at <code>path</code> triggered by <code>trigger</code>.<br />
+<code>path</code>: a local/HDFS directory to save checkpoint.<br />
+<code>trigger</code>: how often to save the check point.<br />
+ <br></p>
+<pre><code class="scala">val path = optimizer.getCheckpointPath()
+</code></pre>
+
+<p>Function getCheckpointPath is used to get the directory of saving checkpoint.<br />
+ <br></p>
+<pre><code class="scala">optimizer.overWriteCheckpoint()
+</code></pre>
+
+<p>Function overWriteCheckpoint is enable overwrite saving checkpoint.  </p>
+<p><strong><em>Summary</em></strong></p>
+<pre><code class="scala">optimizer.setTrainSummary(trainSummary: TrainSummary)
+</code></pre>
+
+<p>Function setTrainSummary is used to enable train summary in this optimizer.<br />
+<code>trainSummary</code>: an instance of TrainSummary.<br />
+ <br></p>
+<pre><code class="scala">optimizer.setValidationSummary(validationSummary: ValidationSummary)
+</code></pre>
+
+<p>Function setValidationSummary is used to enable validation summary in this optimizer.<br />
+<code>validationSummary</code>: an instance of ValidationSummary.  </p>
+<p><strong><em>Other important API</em></strong></p>
+<pre><code class="scala">val trainedModel = optimizer.optimize()
+</code></pre>
+
+<p>Function optimize will start the training.<br />
+ <br></p>
+<pre><code class="scala">optimizer.setModel(newModel: Module[T])
+</code></pre>
+
+<p>Function setModel will set a new model to the optimizer.<br />
+<code>newModel</code>: a model will replace the old model in optimizer.<br />
+ <br></p>
+<pre><code class="scala">optimizer.setState(state: Table)
+</code></pre>
+
+<p>Function setState is used to set a state(learning rate, epochs...) to the <code>optimizer</code>.<br />
+<code>state</code>: the state to be saved.<br />
+ <br></p>
+<pre><code class="scala">optimizer.setOptimMethod(method : OptimMethod[T])
+</code></pre>
+
+<p>Function setOptimMethod is used to set an optimization method in this <code>optimizer</code>.<br />
+<code>method</code>: the method the optimize the model in this <code>optimizer</code>.<br />
+ <br></p>
+<pre><code class="scala">optimizer.setEndWhen(endWhen: Trigger)
+</code></pre>
+
+<p>Function setEndWhen is used to declare when to stop the training invoked by <code>optimize()</code>.<br />
+<code>endWhen</code>: a trigger to stop the training.</p>
+<h3 id="scala-example">Scala example</h3>
+<p>Here is an example to new an Optimizer with SGD for optimizing LeNet5 model.</p>
+<pre><code class="scala">val trainingRDD = ...
+val valRDD = ...
+val batchSize = 12
+// Create an optimizer
+val optimizer = Optimizer(
+  model = LeNet5(classNum = 10),
+  sampleRDD = trainingRDD,
+  criterion = ClassNLLCriterion(),
+  batchSize = batchSize
+).setValidation(Trigger.everyEpoch, valRDD, Array(new Top1Accuracy), batchSize) // set validation method
+  .setEndWhen(Trigger.maxEpoch(15)) // set end trigger
+  .setOptimMethod(new SGD(learningRate = 0.05)) // set optimize method, Since 0.2.0. Older version should use optimizer.setOptimMethod(new SGD()).setState(T(&quot;learningRate&quot; -&gt; 0.05))
+
+val trainedModel = optimizer.optimize()
+</code></pre>
+
+<h3 id="python-api">Python API</h3>
+<p><strong><em>Factory method</em></strong></p>
+<pre><code class="python">optimizer =  Optimizer(model,
+                 training_rdd,
+                 criterion,
+                 end_trigger,
+                 batch_size,
+                 optim_method=None,
+                 bigdl_type=&quot;float&quot;)
+</code></pre>
+
+<p><code>model</code>: the model will be optimized.<br />
+<code>training_rdd</code>: the training dataset.<br />
+<code>criterion</code>: the Loss function.<br />
+<code>end_trigger</code>: when to end the optimization.<br />
+<code>batch_size</code>: size of minibatch.<br />
+<code>optim_method</code>:  the algorithm to use for optimization, e.g. SGD, Adagrad, etc. If optim_method is None, the default algorithm is SGD.<br />
+<code>bigdl_type</code>: the numeric type(Float/Double).  </p>
+<p><strong><em>Validation</em></strong></p>
+<p>Function setValidation is to set a validate evaluation in the <code>optimizer</code>.</p>
+<pre><code class="python">optimizer.set_validation(batch_size, val_rdd, trigger, val_method=[&quot;Top1Accuracy&quot;])
+</code></pre>
+
+<p><code>trigger</code>: how often to evaluation validation set.<br />
+<code>val_rdd</code>: validate data set in type of RDD[Sample].<br />
+<code>val_method</code>: a list of ValidationMethod, e.g. "Top1Accuracy", "Top5Accuracy", "Loss".<br />
+<code>batch_size</code>: size of mini batch.</p>
+<p><strong><em>Checkpoint</em></strong></p>
+<pre><code class="python">optimizer.set_checkpoint(checkpoint_trigger,
+                      checkpoint_path, isOverWrite=True)
+</code></pre>
+
+<p>Function setCheckPoint is used to set a check point saved at <code>path</code> triggered by <code>trigger</code>.<br />
+<code>checkpoint_trigger</code>: how often to save the check point.
+<code>checkpoint_path</code>: a local/HDFS directory to save checkpoint.<br />
+<code>isOverWrite</code>: whether to overwrite existing snapshots in path.default is True</p>
+<p><strong><em>Summary</em></strong></p>
+<pre><code class="python">optimizer.set_train_summary(summary)
+</code></pre>
+
+<p>Set train summary. A TrainSummary object contains information necessary for the optimizer to know how often the logs are recorded, where to store the logs and how to retrieve them, etc. For details, refer to the docs of TrainSummary.
+<code>summary</code>: an instance of TrainSummary.</p>
+<pre><code class="python">optimizer.set_validation_summary(summary)
+</code></pre>
+
+<p>Function setValidationSummary is used to set validation summary. A ValidationSummary object contains information necessary for the optimizer to know how often the logs are recorded, where to store the logs and how to retrieve them, etc. For details, refer to the docs of ValidationSummary.
+<code>summary</code>: an instance of ValidationSummary.</p>
+<p><strong><em>Start Training</em></strong></p>
+<pre><code class="python">trained_model = optimizer.optimize()
+</code></pre>
+
+<p>Function optimize will start the training.</p>
+<p><strong><em>Set Model</em></strong></p>
+<pre><code class="python">optimizer.set_model(model)
+</code></pre>
+
+<p>Function setModel will set a new model to the optimizer.<br />
+<code>model</code>: a model will replace the old model in optimizer.</p>
+<h3 id="python-example">Python example</h3>
+<p>Here is an example to new an Optimizer with SGD for optimizing LeNet5 model.</p>
+<pre><code class="python">train_data = ...
+test_data = ...
+batch_size = 12
+# Create an Optimizer, Since 0.2.0
+optimizer = Optimizer(
+  model=lenet_model,
+  training_rdd=train_data,
+  criterion=ClassNLLCriterion(),
+  end_trigger=MaxEpoch(15),
+  batch_size=batch_size,
+  optim_method=SGD(learningrate=0.05)
+)
+# Older version, before 0.2.0, use following code: 
+# optimizer = Optimizer(
+#   model=model,
+#   training_rdd=train_data,
+#   criterion=ClassNLLCriterion(),
+#   optim_method=&quot;SGD&quot;,
+#   state={&quot;learningRate&quot;: 0.05},
+#   end_trigger=MaxEpoch(training_epochs),
+#   batch_size=batch_size)
+
+optimizer.set_validation(
+    batch_size=2048,
+    val_rdd=test_data,
+    trigger=EveryEpoch(),
+    val_method=[&quot;Top1Accuracy&quot;]
+)
+
+trained_model = optimizer.optimize()
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../DistriOptimizer/" class="btn btn-neutral float-right" title="DistriOptimizer">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../Losses/_merged_Losses/" class="btn btn-neutral" title="Losses"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../Losses/_merged_Losses/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../DistriOptimizer/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../../js/theme.js"></script>
+
+</body>
+</html>

@@ -1,18 +1,14 @@
-<!DOCTYPE html >
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ml - bigdl-SPARK_2.1 0.2.0-SNAPSHOT API - org.apache.spark.ml</title>
-          <meta name="description" content="ml - bigdl - SPARK 2.1 0.2.0 - SNAPSHOT API - org.apache.spark.ml" />
-          <meta name="keywords" content="ml bigdl SPARK 2.1 0.2.0 SNAPSHOT API org.apache.spark.ml" />
+          <title>ml - bigdl 0.2.0-SNAPSHOT API - org.apache.spark.ml</title>
+          <meta name="description" content="ml - bigdl 0.2.0 - SNAPSHOT API - org.apache.spark.ml" />
+          <meta name="keywords" content="ml bigdl 0.2.0 SNAPSHOT API org.apache.spark.ml" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
-      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
-      <script type="text/javascript" src="../../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
-      
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../index.html';
@@ -28,13 +24,9 @@
         </head>
         <body class="value">
       <div id="definition">
-        <img alt="Package" src="../../../../lib/package_big.png" />
+        <img src="../../../../lib/package_big.png" />
         <p id="owner"><a href="../../../package.html" class="extype" name="org">org</a>.<a href="../../package.html" class="extype" name="org.apache">apache</a>.<a href="../package.html" class="extype" name="org.apache.spark">spark</a></p>
-        <h1>ml</h1><span class="permalink">
-      <a href="../../../../index.html#org.apache.spark.ml.package" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+        <h1>ml</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -60,7 +52,7 @@
               <ol>
                 
                 <li class="alpha in"><span>Alphabetic</span></li>
-                <li class="inherit out"><span>By Inheritance</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
               </ol>
             </div>
         <div id="ancestors">
@@ -73,8 +65,9 @@
             <span class="filtertype"></span>
             <ol>
               <li class="hideall out"><span>Hide All</span></li>
-              <li class="showall in"><span>Show All</span></li>
+              <li class="showall in"><span>Show all</span></li>
             </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
           </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -88,8 +81,8 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="org.apache.spark.ml.DLClassifier" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="DLClassifier[T]extendsMlTransformerwithHasInputColwithHasOutputColwithDataParams[T]"></a>
+              <ol><li name="org.apache.spark.ml.DLClassifier" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DLClassifier[T]extendsDLEstimator[T]"></a>
       <a id="DLClassifier[T]:DLClassifier[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -97,33 +90,65 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="DLClassifier.html"><span class="name">DLClassifier</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="org.apache.spark.ml.MlTransformer">MlTransformer</span> with <span class="extype" name="org.apache.spark.ml.param.shared.HasInputCol">HasInputCol</span> with <span class="extype" name="org.apache.spark.ml.param.shared.HasOutputCol">HasOutputCol</span> with <a href="DataParams.html" class="extype" name="org.apache.spark.ml.DataParams">DataParams</a>[<span class="extype" name="org.apache.spark.ml.DLClassifier.T">T</span>]</span>
+        <a href="DLClassifier.html"><span class="name">DLClassifier</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="DLEstimator.html" class="extype" name="org.apache.spark.ml.DLEstimator">DLEstimator</a>[<span class="extype" name="org.apache.spark.ml.DLClassifier.T">T</span>]</span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#org.apache.spark.ml.package@DLClassifier[T]extendsMlTransformerwithHasInputColwithHasOutputColwithDataParams[T]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">A general Classifier to classify the input data in inputCol, and write the results to outputCol.</p><div class="fullcomment"><div class="comment cmt"><p>A general Classifier to classify the input data in inputCol, and write the results to outputCol.
-Use setInputCol to set inputCol name, and use setOutputCol to set outputCol name.</p><p>DLClassifier is compatible with both spark 1.5-plus and 2.0 by extending MLTransform.
-</p></div></div>
-    </li><li name="org.apache.spark.ml.DataParams" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="DataParams[T]extendsParams"></a>
-      <a id="DataParams[T]:DataParams[T]"></a>
+      </h4>
+      <p class="comment cmt"><a href="DLClassifier.html" class="extype" name="org.apache.spark.ml.DLClassifier">DLClassifier</a> is a specialized <a href="DLEstimator.html" class="extype" name="org.apache.spark.ml.DLEstimator">DLEstimator</a> that simplifies the data format for
+classification tasks.</p>
+    </li><li name="org.apache.spark.ml.DLClassifierModel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DLClassifierModel[T]extendsDLModel[T]"></a>
+      <a id="DLClassifierModel[T]:DLClassifierModel[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DLClassifierModel.html"><span class="name">DLClassifierModel</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="DLModel.html" class="extype" name="org.apache.spark.ml.DLModel">DLModel</a>[<span class="extype" name="org.apache.spark.ml.DLClassifierModel.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt"><a href="DLClassifierModel.html" class="extype" name="org.apache.spark.ml.DLClassifierModel">DLClassifierModel</a> is a specialized <a href="DLModel.html" class="extype" name="org.apache.spark.ml.DLModel">DLModel</a> for classification tasks.</p>
+    </li><li name="org.apache.spark.ml.DLEstimator" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DLEstimator[T]extendsDLEstimatorBasewithDLParamswithHasBatchSize"></a>
+      <a id="DLEstimator[T]:DLEstimator[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DLEstimator.html"><span class="name">DLEstimator</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="org.apache.spark.ml.DLEstimatorBase">DLEstimatorBase</span> with <span class="extype" name="org.apache.spark.ml.DLParams">DLParams</span> with <a href="HasBatchSize.html" class="extype" name="org.apache.spark.ml.HasBatchSize">HasBatchSize</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"><a href="DLEstimator.html" class="extype" name="org.apache.spark.ml.DLEstimator">DLEstimator</a> helps to train a BigDL Model with the Spark ML Estimator/Transfomer pattern,
+thus Spark users can conveniently fit BigDL into Spark ML pipeline.</p>
+    </li><li name="org.apache.spark.ml.DLModel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DLModel[T]extendsDLTransformerBasewithDLParamswithHasBatchSize"></a>
+      <a id="DLModel[T]:DLModel[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DLModel.html"><span class="name">DLModel</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="org.apache.spark.ml.DLTransformerBase">DLTransformerBase</span> with <span class="extype" name="org.apache.spark.ml.DLParams">DLParams</span> with <a href="HasBatchSize.html" class="extype" name="org.apache.spark.ml.HasBatchSize">HasBatchSize</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"><a href="DLModel.html" class="extype" name="org.apache.spark.ml.DLModel">DLModel</a> helps embed a BigDL model into a Spark Transformer, thus Spark users can
+conveniently merge BigDL into Spark ML pipeline.</p>
+    </li><li name="org.apache.spark.ml.HasBatchSize" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="HasBatchSizeextendsParams"></a>
+      <a id="HasBatchSize:HasBatchSize"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="DataParams.html"><span class="name">DataParams</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="org.apache.spark.ml.param.Params">Params</span></span>
+        <a href="HasBatchSize.html"><span class="name">HasBatchSize</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.ml.param.Params">Params</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#org.apache.spark.ml.package@DataParams[T]extendsParams" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">parameters passed to DLClassifier</p><div class="fullcomment"><div class="comment cmt"><p>parameters passed to DLClassifier</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>data type</p></dd></dl></div>
+      </h4>
+      
     </li></ol>
             </div>
 
@@ -131,22 +156,18 @@ Use setInputCol to set inputCol name, and use setOutputCol to set outputCol name
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="org.apache.spark.ml.DLClassifier" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="DLClassifier"></a>
-      <a id="DLClassifier:DLClassifier"></a>
+              <ol><li name="org.apache.spark.ml.DLModel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DLModel"></a>
+      <a id="DLModel:DLModel"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="DLClassifier$.html"><span class="name">DLClassifier</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="DLModel$.html"><span class="name">DLModel</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#org.apache.spark.ml.package@DLClassifier" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      </h4>
       
     </li></ol>
             </div>
@@ -177,7 +198,6 @@ Use setInputCol to set inputCol name, and use setOutputCol to set outputCol name
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-
-
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../lib/template.js"></script>
     </body>
       </html>

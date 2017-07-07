@@ -1,18 +1,14 @@
-<!DOCTYPE html >
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>AllReduceParameter - bigdl-SPARK_2.1 0.2.0-SNAPSHOT API - com.intel.analytics.bigdl.parameters.AllReduceParameter</title>
-          <meta name="description" content="AllReduceParameter - bigdl - SPARK 2.1 0.2.0 - SNAPSHOT API - com.intel.analytics.bigdl.parameters.AllReduceParameter" />
-          <meta name="keywords" content="AllReduceParameter bigdl SPARK 2.1 0.2.0 SNAPSHOT API com.intel.analytics.bigdl.parameters.AllReduceParameter" />
+          <title>AllReduceParameter - bigdl 0.2.0-SNAPSHOT API - com.intel.analytics.bigdl.parameters.AllReduceParameter</title>
+          <meta name="description" content="AllReduceParameter - bigdl 0.2.0 - SNAPSHOT API - com.intel.analytics.bigdl.parameters.AllReduceParameter" />
+          <meta name="keywords" content="AllReduceParameter bigdl 0.2.0 SNAPSHOT API com.intel.analytics.bigdl.parameters.AllReduceParameter" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../../../lib/jquery.js" id="jquery-js"></script>
-      <script type="text/javascript" src="../../../../../lib/jquery-ui.js"></script>
-      <script type="text/javascript" src="../../../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../../../lib/tools.tooltip.js"></script>
-      
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../../index.html';
@@ -28,17 +24,9 @@
         </head>
         <body class="type">
       <div id="definition">
-        <a href="AllReduceParameter$.html" title="See companion object"><img alt="Class/Object" src="../../../../../lib/class_to_object_big.png" /></a>
+        <a href="AllReduceParameter$.html" title="Go to companion"><img src="../../../../../lib/class_to_object_big.png" /></a>
         <p id="owner"><a href="../../../../package.html" class="extype" name="com">com</a>.<a href="../../../package.html" class="extype" name="com.intel">intel</a>.<a href="../../package.html" class="extype" name="com.intel.analytics">analytics</a>.<a href="../package.html" class="extype" name="com.intel.analytics.bigdl">bigdl</a>.<a href="package.html" class="extype" name="com.intel.analytics.bigdl.parameters">parameters</a></p>
-        <h1><a href="AllReduceParameter$.html" title="See companion object">AllReduceParameter</a></h1><h3><span class="morelinks"><div>
-            Related Docs:
-            <a href="AllReduceParameter$.html" title="See companion object">object AllReduceParameter</a>
-            | <a href="package.html" class="extype" name="com.intel.analytics.bigdl.parameters">package parameters</a>
-          </div></span></h3><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+        <h1><a href="AllReduceParameter$.html" title="Go to companion">AllReduceParameter</a></h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -51,9 +39,14 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Represent a parameter stored on block manager. In distributed optimization, we put parameter
-on block manager of spark. Each worker sync parameter through block manager. Block manager
-here serve as a parameter server.</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Represent parameters stored on the block manager. In distributed optimization, we put parameters
+on block manager of spark. Each worker syncs parameters through the block manager. Block manager
+here serves as a parameter server.</p><p>A Tensor is sliced into <code>partitionNum</code> chunks and each chunk is assigned to a particular node
+(Spark executor). Likewise, gradients for each chunk are also assigned and stored on separate
+nodes. In this way, gradient aggregation and parameter updates can be performed independently for
+each chunk on separate nodes.
+</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>Tensor element type
+</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -66,7 +59,7 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
               <ol>
                 
                 <li class="alpha in"><span>Alphabetic</span></li>
-                <li class="inherit out"><span>By Inheritance</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
               </ol>
             </div>
         <div id="ancestors">
@@ -79,8 +72,9 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
             <span class="filtertype"></span>
             <ol>
               <li class="hideall out"><span>Hide All</span></li>
-              <li class="showall in"><span>Show All</span></li>
+              <li class="showall in"><span>Show all</span></li>
             </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
           </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -103,12 +97,8 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
       <span class="symbol">
         <span class="name">AllReduceParameter</span><span class="params">(<span name="id">id: <span class="extype" name="scala.Long">Long</span></span>, <span name="partitionNum">partitionNum: <span class="extype" name="scala.Int">Int</span></span>, <span name="size">size: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="com.intel.analytics.bigdl.parameters.AllReduceParameter.T">T</span>]</span>)</span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@&lt;init&gt;(id:Long,partitionNum:Int,size:Int)(implicitevidence$2:scala.reflect.ClassTag[T]):com.intel.analytics.bigdl.parameters.AllReduceParameter[T]" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>distinguish from other parameters</p></dd><dt class="param">partitionNum</dt><dd class="cmt"><p>how many partitions will use this parameter</p></dd><dt class="param">size</dt><dd class="cmt"><p>size of the parameter(1D vector)</p></dd></dl></div>
+      </h4>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>distinguish from other parameters</p></dd><dt class="param">partitionNum</dt><dd class="cmt"><p>how many partitions will use this parameter</p></dd><dt class="param">size</dt><dd class="cmt"><p>size of the parameter (1D vector)</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -119,6 +109,19 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
         <div id="values" class="values members">
               <h3>Value Members</h3>
               <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:AnyRef):Boolean"></a>
+      <a id="!=(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a>
       <a id="!=(Any):Boolean"></a>
       <h4 class="signature">
@@ -129,12 +132,8 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
       <span class="symbol">
         <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@!=(x$1:Any):Boolean" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <a id="##():Int"></a>
@@ -146,13 +145,22 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
       <span class="symbol">
         <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@##():Int" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:AnyRef):Boolean"></a>
+      <a id="==(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a>
       <a id="==(Any):Boolean"></a>
       <h4 class="signature">
@@ -163,29 +171,25 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
       <span class="symbol">
         <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@==(x$1:Any):Boolean" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="com.intel.analytics.bigdl.parameters.AllReduceParameter#aggregrateGradientPartition" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="aggregrateGradientPartition():Unit"></a>
-      <a id="aggregrateGradientPartition():Unit"></a>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="com.intel.analytics.bigdl.parameters.AllReduceParameter#aggregateGradientPartition" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="aggregateGradientPartition():Unit"></a>
+      <a id="aggregateGradientPartition():Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">aggregrateGradientPartition</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">aggregateGradientPartition</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@aggregrateGradientPartition():Unit" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
+      </h4>
+      <p class="shortcomment cmt">Retrieve gradients for the slice of the model that this node is responsible for from all the
+other nodes.</p><div class="fullcomment"><div class="comment cmt"><p>Retrieve gradients for the slice of the model that this node is responsible for from all the
+other nodes. A new thread is created for each separate node. The gradients are then summed
+and then stored in decompressed form in <code>gradientPartition</code>.
+</p></div></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -197,11 +201,7 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
       <span class="symbol">
         <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@asInstanceOf[T0]:T0" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
@@ -214,11 +214,7 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
       <span class="symbol">
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@clone():Object" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -237,11 +233,7 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
       <span class="symbol">
         <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="equals(x$1:Any):Boolean"></a>
@@ -254,11 +246,7 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
       <span class="symbol">
         <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@equals(x$1:Any):Boolean" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
@@ -271,11 +259,7 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
       <span class="symbol">
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@finalize():Unit" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -294,81 +278,9 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
       <span class="symbol">
         <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@getClass():Class[_]" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="com.intel.analytics.bigdl.parameters.AllReduceParameter#getGradientBlockId" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getGradientBlockId(pidFrom:Int,pidTo:Int):org.apache.spark.storage.BlockId"></a>
-      <a id="getGradientBlockId(Int,Int):BlockId"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getGradientBlockId</span><span class="params">(<span name="pidFrom">pidFrom: <span class="extype" name="scala.Int">Int</span></span>, <span name="pidTo">pidTo: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.storage.BlockId">BlockId</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@getGradientBlockId(pidFrom:Int,pidTo:Int):org.apache.spark.storage.BlockId" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="com.intel.analytics.bigdl.parameters.AllReduceParameter#getGradientPartitionId" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getGradientPartitionId():org.apache.spark.storage.BlockId"></a>
-      <a id="getGradientPartitionId():BlockId"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getGradientPartitionId</span><span class="params">()</span><span class="result">: <span class="extype" name="org.apache.spark.storage.BlockId">BlockId</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@getGradientPartitionId():org.apache.spark.storage.BlockId" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="com.intel.analytics.bigdl.parameters.AllReduceParameter#getWeightBlockId" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getWeightBlockId(pid:Int):org.apache.spark.storage.BlockId"></a>
-      <a id="getWeightBlockId(Int):BlockId"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getWeightBlockId</span><span class="params">(<span name="pid">pid: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.storage.BlockId">BlockId</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@getWeightBlockId(pid:Int):org.apache.spark.storage.BlockId" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="com.intel.analytics.bigdl.parameters.AllReduceParameter#getWeightPartitionId" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getWeightPartitionId():org.apache.spark.storage.BlockId"></a>
-      <a id="getWeightPartitionId():BlockId"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getWeightPartitionId</span><span class="params">()</span><span class="result">: <span class="extype" name="org.apache.spark.storage.BlockId">BlockId</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@getWeightPartitionId():org.apache.spark.storage.BlockId" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="com.intel.analytics.bigdl.parameters.AllReduceParameter#getWeights" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="com.intel.analytics.bigdl.parameters.AllReduceParameter#getWeights" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getWeights(localParameter:com.intel.analytics.bigdl.tensor.Tensor[T]):com.intel.analytics.bigdl.parameters.FutureResult[Int]"></a>
       <a id="getWeights(Tensor[T]):FutureResult[Int]"></a>
       <h4 class="signature">
@@ -379,12 +291,12 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
       <span class="symbol">
         <span class="name">getWeights</span><span class="params">(<span name="localParameter">localParameter: <a href="../tensor/Tensor.html" class="extype" name="com.intel.analytics.bigdl.tensor.Tensor">Tensor</a>[<span class="extype" name="com.intel.analytics.bigdl.parameters.AllReduceParameter.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="com.intel.analytics.bigdl.parameters.FutureResult">FutureResult</span>[<span class="extype" name="scala.Int">Int</span>]</span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@getWeights(localParameter:com.intel.analytics.bigdl.tensor.Tensor[T]):com.intel.analytics.bigdl.parameters.FutureResult[Int]" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
+      </h4>
+      <p class="shortcomment cmt">Use a fixed thread pool to launch a thread for each partition of the weights.</p><div class="fullcomment"><div class="comment cmt"><p>Use a fixed thread pool to launch a thread for each partition of the weights. Each thread
+requests a partition of the weights from the Spark block manager and copies it into
+<code>localParameter</code>.
+</p></div><dl class="paramcmts block"><dt class="param">localParameter</dt><dd class="cmt"><p>The Tensor that will hold the retrieved weights.</p></dd><dt>returns</dt><dd class="cmt"><p>A <span class="extype" name="FutureResult">FutureResult</span> which contains a <span class="extype" name="Future">Future</span> for each thread.
+</p></dd></dl></div>
     </li><li name="com.intel.analytics.bigdl.parameters.AllReduceParameter#gradientPartition" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="gradientPartition:com.intel.analytics.bigdl.tensor.Tensor[T]"></a>
       <a id="gradientPartition:Tensor[T]"></a>
@@ -396,12 +308,8 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
       <span class="symbol">
         <span class="name">gradientPartition</span><span class="result">: <a href="../tensor/Tensor.html" class="extype" name="com.intel.analytics.bigdl.tensor.Tensor">Tensor</a>[<span class="extype" name="com.intel.analytics.bigdl.parameters.AllReduceParameter.T">T</span>]</span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@gradientPartition:com.intel.analytics.bigdl.tensor.Tensor[T]" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
+      </h4>
+      <p class="shortcomment cmt">Tensor to hold a slice of the global gradients.</p>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
@@ -413,13 +321,9 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
       <span class="symbol">
         <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@hashCode():Int" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="com.intel.analytics.bigdl.parameters.AllReduceParameter#init" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="com.intel.analytics.bigdl.parameters.AllReduceParameter#init" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="init(parameter:com.intel.analytics.bigdl.tensor.Tensor[T])(implicitev:com.intel.analytics.bigdl.tensor.TensorNumericMath.TensorNumeric[T]):Unit"></a>
       <a id="init(Tensor[T])(TensorNumeric[T]):Unit"></a>
       <h4 class="signature">
@@ -430,12 +334,14 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
       <span class="symbol">
         <span class="name">init</span><span class="params">(<span name="parameter">parameter: <a href="../tensor/Tensor.html" class="extype" name="com.intel.analytics.bigdl.tensor.Tensor">Tensor</a>[<span class="extype" name="com.intel.analytics.bigdl.parameters.AllReduceParameter.T">T</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ev">ev: <a href="../tensor/TensorNumericMath$$TensorNumeric.html" class="extype" name="com.intel.analytics.bigdl.tensor.TensorNumericMath.TensorNumeric">TensorNumeric</a>[<span class="extype" name="com.intel.analytics.bigdl.parameters.AllReduceParameter.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@init(parameter:com.intel.analytics.bigdl.tensor.Tensor[T])(implicitev:com.intel.analytics.bigdl.tensor.TensorNumericMath.TensorNumeric[T]):Unit" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
+      </h4>
+      <p class="shortcomment cmt">This method should be called on each RDD partition before parameter synchronization begins.</p><div class="fullcomment"><div class="comment cmt"><p>This method should be called on each RDD partition before parameter synchronization begins.
+An empty gradient tensor is placed in the block manager that can be used to store gradients.
+A 1 / numPartition fraction of the <code>parameter</code> tensor is copied to the block manager as a
+compressed tensor.
+</p></div><dl class="paramcmts block"><dt class="param">parameter</dt><dd class="cmt"><p>A tensor representing the initial underlying weights of this
+                 <code>AllReduceParameter</code>
+</p></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -447,11 +353,7 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
       <span class="symbol">
         <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
@@ -464,11 +366,7 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
       <span class="symbol">
         <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
@@ -481,11 +379,7 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
       <span class="symbol">
         <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@notify():Unit" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
@@ -498,30 +392,9 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
       <span class="symbol">
         <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@notifyAll():Unit" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="com.intel.analytics.bigdl.parameters.AllReduceParameter#parameterBuffer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="parameterBuffer:com.intel.analytics.bigdl.parameters.CompressedTensor[T]"></a>
-      <a id="parameterBuffer:CompressedTensor[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">parameterBuffer</span><span class="result">: <a href="CompressedTensor.html" class="extype" name="com.intel.analytics.bigdl.parameters.CompressedTensor">CompressedTensor</a>[<span class="extype" name="com.intel.analytics.bigdl.parameters.AllReduceParameter.T">T</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@parameterBuffer:com.intel.analytics.bigdl.parameters.CompressedTensor[T]" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="com.intel.analytics.bigdl.parameters.AllReduceParameter#putGradients" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="com.intel.analytics.bigdl.parameters.AllReduceParameter#putGradients" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="putGradients(parameter:com.intel.analytics.bigdl.tensor.Tensor[T]):Unit"></a>
       <a id="putGradients(Tensor[T]):Unit"></a>
       <h4 class="signature">
@@ -532,64 +405,14 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
       <span class="symbol">
         <span class="name">putGradients</span><span class="params">(<span name="parameter">parameter: <a href="../tensor/Tensor.html" class="extype" name="com.intel.analytics.bigdl.tensor.Tensor">Tensor</a>[<span class="extype" name="com.intel.analytics.bigdl.parameters.AllReduceParameter.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@putGradients(parameter:com.intel.analytics.bigdl.tensor.Tensor[T]):Unit" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="com.intel.analytics.bigdl.parameters.AllReduceParameter#readGradientPartition" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="readGradientPartition():com.intel.analytics.bigdl.tensor.Tensor[T]"></a>
-      <a id="readGradientPartition():Tensor[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">readGradientPartition</span><span class="params">()</span><span class="result">: <a href="../tensor/Tensor.html" class="extype" name="com.intel.analytics.bigdl.tensor.Tensor">Tensor</a>[<span class="extype" name="com.intel.analytics.bigdl.parameters.AllReduceParameter.T">T</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@readGradientPartition():com.intel.analytics.bigdl.tensor.Tensor[T]" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="com.intel.analytics.bigdl.parameters.AllReduceParameter#readParameterBuffer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="readParameterBuffer():com.intel.analytics.bigdl.parameters.CompressedTensor[T]"></a>
-      <a id="readParameterBuffer():CompressedTensor[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">readParameterBuffer</span><span class="params">()</span><span class="result">: <a href="CompressedTensor.html" class="extype" name="com.intel.analytics.bigdl.parameters.CompressedTensor">CompressedTensor</a>[<span class="extype" name="com.intel.analytics.bigdl.parameters.AllReduceParameter.T">T</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@readParameterBuffer():com.intel.analytics.bigdl.parameters.CompressedTensor[T]" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="com.intel.analytics.bigdl.parameters.AllReduceParameter#readWeightParititon" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="readWeightParititon():com.intel.analytics.bigdl.tensor.Tensor[T]"></a>
-      <a id="readWeightParititon():Tensor[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">readWeightParititon</span><span class="params">()</span><span class="result">: <a href="../tensor/Tensor.html" class="extype" name="com.intel.analytics.bigdl.tensor.Tensor">Tensor</a>[<span class="extype" name="com.intel.analytics.bigdl.parameters.AllReduceParameter.T">T</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@readWeightParititon():com.intel.analytics.bigdl.tensor.Tensor[T]" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="com.intel.analytics.bigdl.parameters.AllReduceParameter#sendWeightPartition" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      </h4>
+      <p class="shortcomment cmt">Slice gradients learned from this partition of data into chunks, and mark each chunk to be sent
+to the appropriate parameter node, and put it in the block manager.</p><div class="fullcomment"><div class="comment cmt"><p>Slice gradients learned from this partition of data into chunks, and mark each chunk to be sent
+to the appropriate parameter node, and put it in the block manager.
+</p></div><dl class="paramcmts block"><dt class="param">parameter</dt><dd class="cmt"><p>A Tensor that contains gradients computed on the entire model on a single
+                 partition of data.
+</p></dd></dl></div>
+    </li><li name="com.intel.analytics.bigdl.parameters.AllReduceParameter#sendWeightPartition" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="sendWeightPartition():Unit"></a>
       <a id="sendWeightPartition():Unit"></a>
       <h4 class="signature">
@@ -600,12 +423,10 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
       <span class="symbol">
         <span class="name">sendWeightPartition</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@sendWeightPartition():Unit" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
+      </h4>
+      <p class="shortcomment cmt">Put the portion of the weights that this partition is responsible for to the block manager.</p><div class="fullcomment"><div class="comment cmt"><p>Put the portion of the weights that this partition is responsible for to the block manager.
+Weights are placed locally, then pulled when needed by other partitions.
+</p></div></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -617,11 +438,7 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
       <span class="symbol">
         <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
@@ -634,11 +451,7 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
       <span class="symbol">
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@toString():String" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
@@ -651,11 +464,7 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
       <span class="symbol">
         <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@wait():Unit" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -674,11 +483,7 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
       <span class="symbol">
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -697,11 +502,7 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
       <span class="symbol">
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@wait(x$1:Long):Unit" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -720,12 +521,8 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
       <span class="symbol">
         <span class="name">weightPartition</span><span class="result">: <a href="../tensor/Tensor.html" class="extype" name="com.intel.analytics.bigdl.tensor.Tensor">Tensor</a>[<span class="extype" name="com.intel.analytics.bigdl.parameters.AllReduceParameter.T">T</span>]</span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.parameters.AllReduceParameter@weightPartition:com.intel.analytics.bigdl.tensor.Tensor[T]" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
+      </h4>
+      <p class="shortcomment cmt">Tensor to hold a slice of the global weights.</p>
     </li></ol>
             </div>
 
@@ -759,7 +556,6 @@ here serve as a parameter server.</p></div><div class="toggleContainer block">
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-
-
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../../lib/template.js"></script>
     </body>
       </html>

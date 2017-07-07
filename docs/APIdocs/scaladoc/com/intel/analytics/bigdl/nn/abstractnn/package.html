@@ -1,18 +1,14 @@
-<!DOCTYPE html >
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>abstractnn - bigdl-SPARK_2.1 0.2.0-SNAPSHOT API - com.intel.analytics.bigdl.nn.abstractnn</title>
-          <meta name="description" content="abstractnn - bigdl - SPARK 2.1 0.2.0 - SNAPSHOT API - com.intel.analytics.bigdl.nn.abstractnn" />
-          <meta name="keywords" content="abstractnn bigdl SPARK 2.1 0.2.0 SNAPSHOT API com.intel.analytics.bigdl.nn.abstractnn" />
+          <title>abstractnn - bigdl 0.2.0-SNAPSHOT API - com.intel.analytics.bigdl.nn.abstractnn</title>
+          <meta name="description" content="abstractnn - bigdl 0.2.0 - SNAPSHOT API - com.intel.analytics.bigdl.nn.abstractnn" />
+          <meta name="keywords" content="abstractnn bigdl 0.2.0 SNAPSHOT API com.intel.analytics.bigdl.nn.abstractnn" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../../../../lib/jquery.js" id="jquery-js"></script>
-      <script type="text/javascript" src="../../../../../../lib/jquery-ui.js"></script>
-      <script type="text/javascript" src="../../../../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../../../../lib/tools.tooltip.js"></script>
-      
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../../../index.html';
@@ -28,13 +24,9 @@
         </head>
         <body class="value">
       <div id="definition">
-        <img alt="Package" src="../../../../../../lib/package_big.png" />
+        <img src="../../../../../../lib/package_big.png" />
         <p id="owner"><a href="../../../../../package.html" class="extype" name="com">com</a>.<a href="../../../../package.html" class="extype" name="com.intel">intel</a>.<a href="../../../package.html" class="extype" name="com.intel.analytics">analytics</a>.<a href="../../package.html" class="extype" name="com.intel.analytics.bigdl">bigdl</a>.<a href="../package.html" class="extype" name="com.intel.analytics.bigdl.nn">nn</a></p>
-        <h1>abstractnn</h1><span class="permalink">
-      <a href="../../../../../../index.html#com.intel.analytics.bigdl.nn.abstractnn.package" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+        <h1>abstractnn</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -66,7 +58,7 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="com.intel.analytics.bigdl.nn.abstractnn.AbstractCriterion" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+              <ol><li name="com.intel.analytics.bigdl.nn.abstractnn.AbstractCriterion" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="AbstractCriterion[A&lt;:com.intel.analytics.bigdl.nn.abstractnn.Activity,B&lt;:com.intel.analytics.bigdl.nn.abstractnn.Activity,T]extendsSerializable"></a>
       <a id="AbstractCriterion[A&lt;:Activity,B&lt;:Activity,T]:AbstractCriterion[A,B,T]"></a>
       <h4 class="signature">
@@ -77,19 +69,9 @@
       <span class="symbol">
         <a href="AbstractCriterion.html"><span class="name">AbstractCriterion</span></a><span class="tparams">[<span name="A">A &lt;: <a href="Activity.html" class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.Activity">Activity</a></span>, <span name="B">B &lt;: <a href="Activity.html" class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.Activity">Activity</a></span>, <span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#com.intel.analytics.bigdl.nn.abstractnn.package@AbstractCriterion[A&lt;:com.intel.analytics.bigdl.nn.abstractnn.Activity,B&lt;:com.intel.analytics.bigdl.nn.abstractnn.Activity,T]extendsSerializable" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt"><a href="AbstractCriterion.html" class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.AbstractCriterion">AbstractCriterion</a> is an abstract class the concrete criterion should extend.</p><div class="fullcomment"><div class="comment cmt"><p><a href="AbstractCriterion.html" class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.AbstractCriterion">AbstractCriterion</a> is an abstract class the concrete criterion should extend.
-<code>Criterion</code>s are helpful to train a neural network. Given an input and a target,
-they compute the gradient according to a loss function.</p><p>It provides some important method such as <code>forward</code>, <code>backward</code>, <code>updateOutput</code>,
-<code>updateGradInput</code> frequently used as a criteria. Some of them need to be override
-in a concrete criterion class.
-</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>represents the input type of the criterion, which an be abstract type <a href="Activity.html" class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.Activity">Activity</a>,
-          or concrete type <span class="extype" name="Tensor">Tensor</span> or <span class="extype" name="Table">Table</span></p></dd><dt class="tparam">B</dt><dd class="cmt"><p>represents the output type of the criterion</p></dd><dt class="tparam">T</dt><dd class="cmt"><p>The numeric type in the criterion, usually which are <span class="extype" name="Float">Float</span> or <span class="extype" name="Double">Double</span></p></dd></dl></div>
-    </li><li name="com.intel.analytics.bigdl.nn.abstractnn.AbstractModule" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      </h4>
+      <p class="comment cmt"><a href="AbstractCriterion.html" class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.AbstractCriterion">AbstractCriterion</a> is an abstract class the concrete criterion should extend.</p>
+    </li><li name="com.intel.analytics.bigdl.nn.abstractnn.AbstractModule" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="AbstractModule[A&lt;:com.intel.analytics.bigdl.nn.abstractnn.Activity,B&lt;:com.intel.analytics.bigdl.nn.abstractnn.Activity,T]extendsSerializable"></a>
       <a id="AbstractModule[A&lt;:Activity,B&lt;:Activity,T]:AbstractModule[A,B,T]"></a>
       <h4 class="signature">
@@ -100,15 +82,9 @@ in a concrete criterion class.
       <span class="symbol">
         <a href="AbstractModule.html"><span class="name">AbstractModule</span></a><span class="tparams">[<span name="A">A &lt;: <a href="Activity.html" class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.Activity">Activity</a></span>, <span name="B">B &lt;: <a href="Activity.html" class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.Activity">Activity</a></span>, <span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#com.intel.analytics.bigdl.nn.abstractnn.package@AbstractModule[A&lt;:com.intel.analytics.bigdl.nn.abstractnn.Activity,B&lt;:com.intel.analytics.bigdl.nn.abstractnn.Activity,T]extendsSerializable" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Module is the basic component of a neural network.</p><div class="fullcomment"><div class="comment cmt"><p>Module is the basic component of a neural network. It forward activities and backward gradients.
-Modules can connect to others to construct a complex neural network.
-</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>Input data type</p></dd><dt class="tparam">B</dt><dd class="cmt"><p>Output data type</p></dd><dt class="tparam">T</dt><dd class="cmt"><p>Numeric type. Only support float/double now</p></dd></dl></div>
-    </li><li name="com.intel.analytics.bigdl.nn.abstractnn.Activity" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      </h4>
+      <p class="comment cmt">Module is the basic component of a neural network.</p>
+    </li><li name="com.intel.analytics.bigdl.nn.abstractnn.Activity" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="ActivityextendsAnyRef"></a>
       <a id="Activity:Activity"></a>
       <h4 class="signature">
@@ -119,20 +95,25 @@ Modules can connect to others to construct a complex neural network.
       <span class="symbol">
         <a href="Activity.html"><span class="name">Activity</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#com.intel.analytics.bigdl.nn.abstractnn.package@ActivityextendsAnyRef" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt"><a href="Activity.html" class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.Activity">Activity</a> is a trait which represents
+      </h4>
+      <p class="comment cmt"><a href="Activity.html" class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.Activity">Activity</a> is a trait which represents
 the concept of neural input within neural
-networks.</p><div class="fullcomment"><div class="comment cmt"><p><a href="Activity.html" class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.Activity">Activity</a> is a trait which represents
-the concept of neural input within neural
-networks. For now, two type of input are
-supported and extending this trait, which
-are <span class="extype" name="Tensor">Tensor</span> and <span class="extype" name="Table">Table</span>.
-</p></div></div>
-    </li><li name="com.intel.analytics.bigdl.nn.abstractnn.TensorCriterion" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+networks.</p>
+    </li><li name="com.intel.analytics.bigdl.nn.abstractnn.Initializable" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="InitializableextendsAnyRef"></a>
+      <a id="Initializable:Initializable"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Initializable.html"><span class="name">Initializable</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">The trait that contains setInitMethod
+</p>
+    </li><li name="com.intel.analytics.bigdl.nn.abstractnn.TensorCriterion" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="TensorCriterion[T]extendsAbstractCriterion[com.intel.analytics.bigdl.tensor.Tensor[T],com.intel.analytics.bigdl.tensor.Tensor[T],T]"></a>
       <a id="TensorCriterion[T]:TensorCriterion[T]"></a>
       <h4 class="signature">
@@ -143,16 +124,10 @@ are <span class="extype" name="Tensor">Tensor</span> and <span class="extype" na
       <span class="symbol">
         <a href="TensorCriterion.html"><span class="name">TensorCriterion</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="AbstractCriterion.html" class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.AbstractCriterion">AbstractCriterion</a>[<a href="../../tensor/Tensor.html" class="extype" name="com.intel.analytics.bigdl.tensor.Tensor">Tensor</a>[<span class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.TensorCriterion.T">T</span>], <a href="../../tensor/Tensor.html" class="extype" name="com.intel.analytics.bigdl.tensor.Tensor">Tensor</a>[<span class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.TensorCriterion.T">T</span>], <span class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.TensorCriterion.T">T</span>]</span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#com.intel.analytics.bigdl.nn.abstractnn.package@TensorCriterion[T]extendsAbstractCriterion[com.intel.analytics.bigdl.tensor.Tensor[T],com.intel.analytics.bigdl.tensor.Tensor[T],T]" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt"><a href="TensorCriterion.html" class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.TensorCriterion">TensorCriterion</a> is an abstract sub-class of <a href="AbstractCriterion.html" class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.AbstractCriterion">AbstractCriterion</a>, whose
-input and output type both are <span class="extype" name="Tensor">Tensor</span>.</p><div class="fullcomment"><div class="comment cmt"><p><a href="TensorCriterion.html" class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.TensorCriterion">TensorCriterion</a> is an abstract sub-class of <a href="AbstractCriterion.html" class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.AbstractCriterion">AbstractCriterion</a>, whose
-input and output type both are <span class="extype" name="Tensor">Tensor</span>.
-</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>The numeric type in the criterion, usually which are <span class="extype" name="Float">Float</span> or <span class="extype" name="Double">Double</span></p></dd></dl></div>
-    </li><li name="com.intel.analytics.bigdl.nn.abstractnn.TensorModule" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      </h4>
+      <p class="comment cmt"><a href="TensorCriterion.html" class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.TensorCriterion">TensorCriterion</a> is an abstract sub-class of <a href="AbstractCriterion.html" class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.AbstractCriterion">AbstractCriterion</a>, whose
+input and output type both are <span class="extype" name="Tensor">Tensor</span>.</p>
+    </li><li name="com.intel.analytics.bigdl.nn.abstractnn.TensorModule" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="TensorModule[T]extendsAbstractModule[com.intel.analytics.bigdl.tensor.Tensor[T],com.intel.analytics.bigdl.tensor.Tensor[T],T]"></a>
       <a id="TensorModule[T]:TensorModule[T]"></a>
       <h4 class="signature">
@@ -163,15 +138,9 @@ input and output type both are <span class="extype" name="Tensor">Tensor</span>.
       <span class="symbol">
         <a href="TensorModule.html"><span class="name">TensorModule</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="AbstractModule.html" class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.AbstractModule">AbstractModule</a>[<a href="../../tensor/Tensor.html" class="extype" name="com.intel.analytics.bigdl.tensor.Tensor">Tensor</a>[<span class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.TensorModule.T">T</span>], <a href="../../tensor/Tensor.html" class="extype" name="com.intel.analytics.bigdl.tensor.Tensor">Tensor</a>[<span class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.TensorModule.T">T</span>], <span class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.TensorModule.T">T</span>]</span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#com.intel.analytics.bigdl.nn.abstractnn.package@TensorModule[T]extendsAbstractModule[com.intel.analytics.bigdl.tensor.Tensor[T],com.intel.analytics.bigdl.tensor.Tensor[T],T]" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt"><a href="TensorModule.html" class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.TensorModule">TensorModule</a> is an abstract sub-class of <a href="AbstractModule.html" class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.AbstractModule">AbstractModule</a>, whose
-input and output type both are <span class="extype" name="Tensor">Tensor</span>.</p><div class="fullcomment"><div class="comment cmt"><p><a href="TensorModule.html" class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.TensorModule">TensorModule</a> is an abstract sub-class of <a href="AbstractModule.html" class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.AbstractModule">AbstractModule</a>, whose
-input and output type both are <span class="extype" name="Tensor">Tensor</span>.
-</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>The numeric type in the criterion, usually which are <span class="extype" name="Float">Float</span> or <span class="extype" name="Double">Double</span></p></dd></dl></div>
+      </h4>
+      <p class="comment cmt"><a href="TensorModule.html" class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.TensorModule">TensorModule</a> is an abstract sub-class of <a href="AbstractModule.html" class="extype" name="com.intel.analytics.bigdl.nn.abstractnn.AbstractModule">AbstractModule</a>, whose
+input and output type both are <span class="extype" name="Tensor">Tensor</span>.</p>
     </li></ol>
             </div>
 
@@ -190,11 +159,7 @@ input and output type both are <span class="extype" name="Tensor">Tensor</span>.
       <span class="symbol">
         <a href="Activity$.html"><span class="name">Activity</span></a>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#com.intel.analytics.bigdl.nn.abstractnn.package@Activity" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      </h4>
       
     </li></ol>
             </div>
@@ -221,7 +186,6 @@ input and output type both are <span class="extype" name="Tensor">Tensor</span>.
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-
-
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../../../lib/template.js"></script>
     </body>
       </html>

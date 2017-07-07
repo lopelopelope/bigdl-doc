@@ -1,18 +1,14 @@
-<!DOCTYPE html >
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>dataset - bigdl-SPARK_2.1 0.2.0-SNAPSHOT API - com.intel.analytics.bigdl.dataset</title>
-          <meta name="description" content="dataset - bigdl - SPARK 2.1 0.2.0 - SNAPSHOT API - com.intel.analytics.bigdl.dataset" />
-          <meta name="keywords" content="dataset bigdl SPARK 2.1 0.2.0 SNAPSHOT API com.intel.analytics.bigdl.dataset" />
+          <title>dataset - bigdl 0.2.0-SNAPSHOT API - com.intel.analytics.bigdl.dataset</title>
+          <meta name="description" content="dataset - bigdl 0.2.0 - SNAPSHOT API - com.intel.analytics.bigdl.dataset" />
+          <meta name="keywords" content="dataset bigdl 0.2.0 SNAPSHOT API com.intel.analytics.bigdl.dataset" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../../../lib/jquery.js" id="jquery-js"></script>
-      <script type="text/javascript" src="../../../../../lib/jquery-ui.js"></script>
-      <script type="text/javascript" src="../../../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../../../lib/tools.tooltip.js"></script>
-      
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../../index.html';
@@ -28,13 +24,9 @@
         </head>
         <body class="value">
       <div id="definition">
-        <img alt="Package" src="../../../../../lib/package_big.png" />
+        <img src="../../../../../lib/package_big.png" />
         <p id="owner"><a href="../../../../package.html" class="extype" name="com">com</a>.<a href="../../../package.html" class="extype" name="com.intel">intel</a>.<a href="../../package.html" class="extype" name="com.intel.analytics">analytics</a>.<a href="../package.html" class="extype" name="com.intel.analytics.bigdl">bigdl</a></p>
-        <h1>dataset</h1><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.dataset.package" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+        <h1>dataset</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -66,7 +58,7 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="com.intel.analytics.bigdl.dataset.AbstractDataSet" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+              <ol><li name="com.intel.analytics.bigdl.dataset.AbstractDataSet" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="AbstractDataSet[D,DataSequence]extendsAnyRef"></a>
       <a id="AbstractDataSet[D,DataSequence]:AbstractDataSet[D,DataSequence]"></a>
       <h4 class="signature">
@@ -77,18 +69,9 @@
       <span class="symbol">
         <a href="AbstractDataSet.html"><span class="name">AbstractDataSet</span></a><span class="tparams">[<span name="D">D</span>, <span name="DataSequence">DataSequence</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.dataset.package@AbstractDataSet[D,DataSequence]extendsAnyRef" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">A set of data which is used in the model optimization process.</p><div class="fullcomment"><div class="comment cmt"><p>A set of data which is used in the model optimization process. The dataset can be access in
-a random data sample sequence. In the training process, the data sequence is a looped endless
-sequence. While in the validation process, the data sequence is a limited length sequence.
-User can use the data() method to get the data sequence.</p><p>The sequence of the data is not fixed. It can be changed by the shuffle() method.</p><p>User can create a dataset from a RDD, an array and a folder, etc. The DataSet object provides
-many factory methods.
-</p></div><dl class="paramcmts block"><dt class="tparam">D</dt><dd class="cmt"><p>Data type</p></dd><dt class="tparam">DataSequence</dt><dd class="cmt"><p>Represent a sequence of data</p></dd></dl></div>
-    </li><li name="com.intel.analytics.bigdl.dataset.ByteRecord" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      </h4>
+      <p class="comment cmt">A set of data which is used in the model optimization process.</p>
+    </li><li name="com.intel.analytics.bigdl.dataset.ByteRecord" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ByteRecordextendsProductwithSerializable"></a>
       <a id="ByteRecord:ByteRecord"></a>
       <h4 class="signature">
@@ -99,12 +82,8 @@ many factory methods.
       <span class="symbol">
         <a href="ByteRecord.html"><span class="name">ByteRecord</span></a><span class="params">(<span name="data">data: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>, <span name="label">label: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.dataset.package@ByteRecordextendsProductwithSerializable" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">A byte array and a label.</p><div class="fullcomment"><div class="comment cmt"><p>A byte array and a label. It can contain anything.</p></div></div>
+      </h4>
+      <p class="comment cmt">A byte array and a label.</p>
     </li><li name="com.intel.analytics.bigdl.dataset.CachedDistriDataSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="CachedDistriDataSet[T]extendsDistributedDataSet[T]"></a>
       <a id="CachedDistriDataSet[T]:CachedDistriDataSet[T]"></a>
@@ -116,13 +95,9 @@ many factory methods.
       <span class="symbol">
         <a href="CachedDistriDataSet.html"><span class="name">CachedDistriDataSet</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="DistributedDataSet.html" class="extype" name="com.intel.analytics.bigdl.dataset.DistributedDataSet">DistributedDataSet</a>[<span class="extype" name="com.intel.analytics.bigdl.dataset.CachedDistriDataSet.T">T</span>]</span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.dataset.package@CachedDistriDataSet[T]extendsDistributedDataSet[T]" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Wrap a RDD as a DataSet.</p>
-    </li><li name="com.intel.analytics.bigdl.dataset.ChainedTransformer" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      </h4>
+      <p class="comment cmt">Wrap a RDD as a DataSet.</p>
+    </li><li name="com.intel.analytics.bigdl.dataset.ChainedTransformer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ChainedTransformer[A,B,C]extendsTransformer[A,C]"></a>
       <a id="ChainedTransformer[A,B,C]:ChainedTransformer[A,B,C]"></a>
       <h4 class="signature">
@@ -133,14 +108,9 @@ many factory methods.
       <span class="symbol">
         <a href="ChainedTransformer.html"><span class="name">ChainedTransformer</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>]</span><span class="result"> extends <a href="Transformer.html" class="extype" name="com.intel.analytics.bigdl.dataset.Transformer">Transformer</a>[<span class="extype" name="com.intel.analytics.bigdl.dataset.ChainedTransformer.A">A</span>, <span class="extype" name="com.intel.analytics.bigdl.dataset.ChainedTransformer.C">C</span>]</span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.dataset.package@ChainedTransformer[A,B,C]extendsTransformer[A,C]" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">A transformer chain two transformer together.</p><div class="fullcomment"><div class="comment cmt"><p>A transformer chain two transformer together. The output type of the first transformer should be
-same with the input type of the second transformer.</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>input type of the first transformer</p></dd><dt class="tparam">B</dt><dd class="cmt"><p>output type of the first transformer, as well as the input type of the last transformer</p></dd><dt class="tparam">C</dt><dd class="cmt"><p>output of the last transformer</p></dd></dl></div>
-    </li><li name="com.intel.analytics.bigdl.dataset.DistributedDataSet" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      </h4>
+      <p class="comment cmt">A transformer chain two transformer together.</p>
+    </li><li name="com.intel.analytics.bigdl.dataset.DistributedDataSet" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="DistributedDataSet[T]extendsAbstractDataSet[T,org.apache.spark.rdd.RDD[T]]"></a>
       <a id="DistributedDataSet[T]:DistributedDataSet[T]"></a>
       <h4 class="signature">
@@ -151,13 +121,8 @@ same with the input type of the second transformer.</p></div><dl class="paramcmt
       <span class="symbol">
         <a href="DistributedDataSet.html"><span class="name">DistributedDataSet</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="AbstractDataSet.html" class="extype" name="com.intel.analytics.bigdl.dataset.AbstractDataSet">AbstractDataSet</a>[<span class="extype" name="com.intel.analytics.bigdl.dataset.DistributedDataSet.T">T</span>, <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<span class="extype" name="com.intel.analytics.bigdl.dataset.DistributedDataSet.T">T</span>]]</span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.dataset.package@DistributedDataSet[T]extendsAbstractDataSet[T,org.apache.spark.rdd.RDD[T]]" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Represent a distributed data.</p><div class="fullcomment"><div class="comment cmt"><p>Represent a distributed data. Use RDD to go through all data.
-</p></div></div>
+      </h4>
+      <p class="comment cmt">Represent a distributed data.</p>
     </li><li name="com.intel.analytics.bigdl.dataset.Identity" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Identity[A]extendsTransformer[A,A]"></a>
       <a id="Identity[A]:Identity[A]"></a>
@@ -169,12 +134,8 @@ same with the input type of the second transformer.</p></div><dl class="paramcmt
       <span class="symbol">
         <a href="Identity.html"><span class="name">Identity</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="Transformer.html" class="extype" name="com.intel.analytics.bigdl.dataset.Transformer">Transformer</a>[<span class="extype" name="com.intel.analytics.bigdl.dataset.Identity.A">A</span>, <span class="extype" name="com.intel.analytics.bigdl.dataset.Identity.A">A</span>]</span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.dataset.package@Identity[A]extendsTransformer[A,A]" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Just transform the input to output.</p>
+      </h4>
+      <p class="comment cmt">Just transform the input to output.</p>
     </li><li name="com.intel.analytics.bigdl.dataset.Image" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="ImageextendsSerializable"></a>
       <a id="Image:Image"></a>
@@ -186,12 +147,8 @@ same with the input type of the second transformer.</p></div><dl class="paramcmt
       <span class="symbol">
         <a href="Image.html"><span class="name">Image</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.dataset.package@ImageextendsSerializable" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Represent an image
+      </h4>
+      <p class="comment cmt">Represent an image
 </p>
     </li><li name="com.intel.analytics.bigdl.dataset.Label" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="Label[T]extendsAnyRef"></a>
@@ -204,12 +161,8 @@ same with the input type of the second transformer.</p></div><dl class="paramcmt
       <span class="symbol">
         <a href="Label.html"><span class="name">Label</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.dataset.package@Label[T]extendsAnyRef" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Represent a label
+      </h4>
+      <p class="comment cmt">Represent a label
 </p>
     </li><li name="com.intel.analytics.bigdl.dataset.LocalArrayDataSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="LocalArrayDataSet[T]extendsLocalDataSet[T]"></a>
@@ -222,13 +175,9 @@ same with the input type of the second transformer.</p></div><dl class="paramcmt
       <span class="symbol">
         <a href="LocalArrayDataSet.html"><span class="name">LocalArrayDataSet</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="LocalDataSet.html" class="extype" name="com.intel.analytics.bigdl.dataset.LocalDataSet">LocalDataSet</a>[<span class="extype" name="com.intel.analytics.bigdl.dataset.LocalArrayDataSet.T">T</span>]</span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.dataset.package@LocalArrayDataSet[T]extendsLocalDataSet[T]" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Wrap an array as a DataSet.</p>
-    </li><li name="com.intel.analytics.bigdl.dataset.LocalDataSet" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      </h4>
+      <p class="comment cmt">Wrap an array as a DataSet.</p>
+    </li><li name="com.intel.analytics.bigdl.dataset.LocalDataSet" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="LocalDataSet[T]extendsAbstractDataSet[T,Iterator[T]]"></a>
       <a id="LocalDataSet[T]:LocalDataSet[T]"></a>
       <h4 class="signature">
@@ -239,12 +188,8 @@ same with the input type of the second transformer.</p></div><dl class="paramcmt
       <span class="symbol">
         <a href="LocalDataSet.html"><span class="name">LocalDataSet</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="AbstractDataSet.html" class="extype" name="com.intel.analytics.bigdl.dataset.AbstractDataSet">AbstractDataSet</a>[<span class="extype" name="com.intel.analytics.bigdl.dataset.LocalDataSet.T">T</span>, <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="com.intel.analytics.bigdl.dataset.LocalDataSet.T">T</span>]]</span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.dataset.package@LocalDataSet[T]extendsAbstractDataSet[T,Iterator[T]]" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Manage some 'local' data, e.g.</p><div class="fullcomment"><div class="comment cmt"><p>Manage some 'local' data, e.g. data in files or memory. We use iterator to go through the data.</p></div></div>
+      </h4>
+      <p class="comment cmt">Manage some 'local' data, e.</p>
     </li><li name="com.intel.analytics.bigdl.dataset.LocalImagePath" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="LocalImagePathextendsAnyRef"></a>
       <a id="LocalImagePath:LocalImagePath"></a>
@@ -256,12 +201,8 @@ same with the input type of the second transformer.</p></div><dl class="paramcmt
       <span class="symbol">
         <a href="LocalImagePath.html"><span class="name">LocalImagePath</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.dataset.package@LocalImagePathextendsAnyRef" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Represent a local file path of an image file
+      </h4>
+      <p class="comment cmt">Represent a local file path of an image file
 </p>
     </li><li name="com.intel.analytics.bigdl.dataset.LocalSeqFilePath" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="LocalSeqFilePathextendsProductwithSerializable"></a>
@@ -274,14 +215,10 @@ same with the input type of the second transformer.</p></div><dl class="paramcmt
       <span class="symbol">
         <a href="LocalSeqFilePath.html"><span class="name">LocalSeqFilePath</span></a><span class="params">(<span name="path">path: <span class="extype" name="java.nio.file.Path">Path</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.dataset.package@LocalSeqFilePathextendsProductwithSerializable" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Represent a local file path of a hadoop sequence file
+      </h4>
+      <p class="comment cmt">Represent a local file path of a hadoop sequence file
 </p>
-    </li><li name="com.intel.analytics.bigdl.dataset.MiniBatch" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+    </li><li name="com.intel.analytics.bigdl.dataset.MiniBatch" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="MiniBatch[T]extendsSerializable"></a>
       <a id="MiniBatch[T]:MiniBatch[T]"></a>
       <h4 class="signature">
@@ -292,15 +229,9 @@ same with the input type of the second transformer.</p></div><dl class="paramcmt
       <span class="symbol">
         <a href="MiniBatch.html"><span class="name">MiniBatch</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.dataset.package@MiniBatch[T]extendsSerializable" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">A interface for MiniBatch.</p><div class="fullcomment"><div class="comment cmt"><p>A interface for MiniBatch.
-A MiniBatch contains a few samples.
-</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>Numeric type</p></dd></dl></div>
-    </li><li name="com.intel.analytics.bigdl.dataset.Sample" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      </h4>
+      <p class="comment cmt">A interface for MiniBatch.</p>
+    </li><li name="com.intel.analytics.bigdl.dataset.Sample" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="Sample[T]extendsSerializable"></a>
       <a id="Sample[T]:Sample[T]"></a>
       <h4 class="signature">
@@ -311,12 +242,8 @@ A MiniBatch contains a few samples.
       <span class="symbol">
         <a href="Sample.html"><span class="name">Sample</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.dataset.package@Sample[T]extendsSerializable" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Class that represents the features and labels of a data sample.</p><div class="fullcomment"><div class="comment cmt"><p>Class that represents the features and labels of a data sample.</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>numeric type</p></dd></dl></div>
+      </h4>
+      <p class="comment cmt">Class that represents the features and labels of a data sample.</p>
     </li><li name="com.intel.analytics.bigdl.dataset.SampleToBatch" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="SampleToBatch[T]extendsTransformer[com.intel.analytics.bigdl.dataset.Sample[T],com.intel.analytics.bigdl.dataset.MiniBatch[T]]"></a>
       <a id="SampleToBatch[T]:SampleToBatch[T]"></a>
@@ -328,12 +255,8 @@ A MiniBatch contains a few samples.
       <span class="symbol">
         <a href="SampleToBatch.html"><span class="name">SampleToBatch</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="Transformer.html" class="extype" name="com.intel.analytics.bigdl.dataset.Transformer">Transformer</a>[<a href="Sample.html" class="extype" name="com.intel.analytics.bigdl.dataset.Sample">Sample</a>[<span class="extype" name="com.intel.analytics.bigdl.dataset.SampleToBatch.T">T</span>], <a href="MiniBatch.html" class="extype" name="com.intel.analytics.bigdl.dataset.MiniBatch">MiniBatch</a>[<span class="extype" name="com.intel.analytics.bigdl.dataset.SampleToBatch.T">T</span>]]</span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.dataset.package@SampleToBatch[T]extendsTransformer[com.intel.analytics.bigdl.dataset.Sample[T],com.intel.analytics.bigdl.dataset.MiniBatch[T]]" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Convert a sequence of <a href="TensorSample.html" class="extype" name="com.intel.analytics.bigdl.dataset.TensorSample">TensorSample</a> to a sequence of <a href="TensorMiniBatch.html" class="extype" name="com.intel.analytics.bigdl.dataset.TensorMiniBatch">TensorMiniBatch</a>,
+      </h4>
+      <p class="comment cmt">Convert a sequence of <a href="TensorSample.html" class="extype" name="com.intel.analytics.bigdl.dataset.TensorSample">TensorSample</a> to a sequence of <a href="TensorMiniBatch.html" class="extype" name="com.intel.analytics.bigdl.dataset.TensorMiniBatch">TensorMiniBatch</a>,
 optionally padding all the features (or labels) in the mini-batch to the same length
 </p>
     </li><li name="com.intel.analytics.bigdl.dataset.Sentence" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
@@ -347,14 +270,10 @@ optionally padding all the features (or labels) in the mini-batch to the same le
       <span class="symbol">
         <a href="Sentence.html"><span class="name">Sentence</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.dataset.package@Sentence[T]extendsSerializable" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Represent a sentence
+      </h4>
+      <p class="comment cmt">Represent a sentence
 </p>
-    </li><li name="com.intel.analytics.bigdl.dataset.TensorMiniBatch" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="com.intel.analytics.bigdl.dataset.TensorMiniBatch" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="TensorMiniBatch[T]extendsMiniBatch[T]"></a>
       <a id="TensorMiniBatch[T]:TensorMiniBatch[T]"></a>
       <h4 class="signature">
@@ -365,15 +284,9 @@ optionally padding all the features (or labels) in the mini-batch to the same le
       <span class="symbol">
         <a href="TensorMiniBatch.html"><span class="name">TensorMiniBatch</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="MiniBatch.html" class="extype" name="com.intel.analytics.bigdl.dataset.MiniBatch">MiniBatch</a>[<span class="extype" name="com.intel.analytics.bigdl.dataset.TensorMiniBatch.T">T</span>]</span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.dataset.package@TensorMiniBatch[T]extendsMiniBatch[T]" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">A MiniBatch with <span class="extype" name="Tensor">Tensor</span> input and <span class="extype" name="Tensor">Tensor</span> target.</p><div class="fullcomment"><div class="comment cmt"><p>A MiniBatch with <span class="extype" name="Tensor">Tensor</span> input and <span class="extype" name="Tensor">Tensor</span> target.
-The size of first dimension in input and target should be the mini-batch size.
-</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>Numeric type</p></dd></dl></div>
-    </li><li name="com.intel.analytics.bigdl.dataset.TensorSample" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      </h4>
+      <p class="comment cmt">A MiniBatch with <span class="extype" name="Tensor">Tensor</span> input and <span class="extype" name="Tensor">Tensor</span> target.</p>
+    </li><li name="com.intel.analytics.bigdl.dataset.TensorSample" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="TensorSample[T]extendsSample[T]"></a>
       <a id="TensorSample[T]:TensorSample[T]"></a>
       <h4 class="signature">
@@ -384,13 +297,9 @@ The size of first dimension in input and target should be the mini-batch size.
       <span class="symbol">
         <a href="TensorSample.html"><span class="name">TensorSample</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="Sample.html" class="extype" name="com.intel.analytics.bigdl.dataset.Sample">Sample</a>[<span class="extype" name="com.intel.analytics.bigdl.dataset.TensorSample.T">T</span>]</span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.dataset.package@TensorSample[T]extendsSample[T]" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">A kind of sample.</p><div class="fullcomment"><div class="comment cmt"><p>A kind of sample. Feature is a tensor, and label is a tensor too.</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>numeric type</p></dd></dl></div>
-    </li><li name="com.intel.analytics.bigdl.dataset.Transformer" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      </h4>
+      <p class="comment cmt">A kind of sample.</p>
+    </li><li name="com.intel.analytics.bigdl.dataset.Transformer" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="Transformer[A,B]extendsSerializable"></a>
       <a id="Transformer[A,B]:Transformer[A,B]"></a>
       <h4 class="signature">
@@ -401,16 +310,8 @@ The size of first dimension in input and target should be the mini-batch size.
       <span class="symbol">
         <a href="Transformer.html"><span class="name">Transformer</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.dataset.package@Transformer[A,B]extendsSerializable" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Transform a data stream of type A to type B.</p><div class="fullcomment"><div class="comment cmt"><p>Transform a data stream of type A to type B. It is usually used in data pre-process stage.
-Different transformers can compose a pipeline. For example, if there're transformer1 from A to
-B, transformer2 from B to C, and transformer3 from C to D, you can compose them into a bigger
-transformer from A to D by transformer1 -&gt; transformer2 -&gt; transformer 3.</p><p>The purpose of transformer is for code reuse. Many deep learning share many common data
-pre-process steps. User needn't write them every time, but can reuse others work.</p><p>Transformer can be used with RDD(rdd.mapPartition), iterator and DataSet.</p></div></div>
+      </h4>
+      <p class="comment cmt">Transform a data stream of type A to type B.</p>
     </li></ol>
             </div>
 
@@ -429,12 +330,8 @@ pre-process steps. User needn't write them every time, but can reuse others work
       <span class="symbol">
         <a href="DataSet$.html"><span class="name">DataSet</span></a>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.dataset.package@DataSet" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Common used DataSet builder.</p>
+      </h4>
+      <p class="comment cmt">Common used DataSet builder.</p>
     </li><li name="com.intel.analytics.bigdl.dataset.Identity" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Identity"></a>
       <a id="Identity:Identity"></a>
@@ -446,11 +343,7 @@ pre-process steps. User needn't write them every time, but can reuse others work
       <span class="symbol">
         <a href="Identity$.html"><span class="name">Identity</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.dataset.package@Identity" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      </h4>
       
     </li><li name="com.intel.analytics.bigdl.dataset.MiniBatch" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="MiniBatch"></a>
@@ -463,11 +356,7 @@ pre-process steps. User needn't write them every time, but can reuse others work
       <span class="symbol">
         <a href="MiniBatch$.html"><span class="name">MiniBatch</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.dataset.package@MiniBatch" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      </h4>
       
     </li><li name="com.intel.analytics.bigdl.dataset.Sample" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Sample"></a>
@@ -480,11 +369,7 @@ pre-process steps. User needn't write them every time, but can reuse others work
       <span class="symbol">
         <a href="Sample$.html"><span class="name">Sample</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.dataset.package@Sample" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      </h4>
       
     </li><li name="com.intel.analytics.bigdl.dataset.SampleToBatch" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="SampleToBatch"></a>
@@ -497,12 +382,8 @@ pre-process steps. User needn't write them every time, but can reuse others work
       <span class="symbol">
         <a href="SampleToBatch$.html"><span class="name">SampleToBatch</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.dataset.package@SampleToBatch" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Convert a sequence of Sample to a sequence of MiniBatch,
+      </h4>
+      <p class="comment cmt">Convert a sequence of Sample to a sequence of MiniBatch,
 optionally padding all the features (or labels) in the mini-batch to the same length
 </p>
     </li><li name="com.intel.analytics.bigdl.dataset.Utils" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
@@ -516,11 +397,7 @@ optionally padding all the features (or labels) in the mini-batch to the same le
       <span class="symbol">
         <a href="Utils$.html"><span class="name">Utils</span></a>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.dataset.package@Utils" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      </h4>
       
     </li><li name="com.intel.analytics.bigdl.dataset.image" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="image"></a>
@@ -533,11 +410,7 @@ optionally padding all the features (or labels) in the mini-batch to the same le
       <span class="symbol">
         <a href="image/package.html"><span class="name">image</span></a>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.dataset.package@image" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      </h4>
       
     </li><li name="com.intel.analytics.bigdl.dataset.text" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="text"></a>
@@ -550,11 +423,7 @@ optionally padding all the features (or labels) in the mini-batch to the same le
       <span class="symbol">
         <a href="text/package.html"><span class="name">text</span></a>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#com.intel.analytics.bigdl.dataset.package@text" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      </h4>
       
     </li></ol>
             </div>
@@ -581,7 +450,6 @@ optionally padding all the features (or labels) in the mini-batch to the same le
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-
-
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../../lib/template.js"></script>
     </body>
       </html>
