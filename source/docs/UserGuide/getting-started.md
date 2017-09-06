@@ -24,7 +24,7 @@ You can quickly experiment with BigDL codes as a Spark program using the interac
 ```sbt
 $ source PATH_To_BigDL/bin/bigdl.sh
 $ SPARK_HOME/bin/spark-shell --properties-file dist/conf/spark-bigdl.conf    \
-  --jars bigdl-VERSION-jar-with-dependencies.jar
+  --jars /dist/lib/bigdl-VERSION-jar-with-dependencies.jar
 ```
 Then you can see something like:
 ```
