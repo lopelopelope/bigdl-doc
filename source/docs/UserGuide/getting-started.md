@@ -94,6 +94,7 @@ You can run a BigDL program, e.g., the [VGG](https://github.com/intel-analytics/
   * -f: The folder where your put the CIFAR-10 data set. Note in this example, this is just a local file folder on the Spark driver; as the CIFAR-10 data is somewhat small (about 120MB), we will directly send it from the driver to executors in the example.
 
   * -b: The mini-batch size. The mini-batch size is expected to be a multiple of *total cores* used in the job. In this example, the mini-batch size is suggested to be set to *total cores * 4*
+  
 ## Use log4j properity file to investigate issue using Debug log
 1.an example log4j properity file
 ```
