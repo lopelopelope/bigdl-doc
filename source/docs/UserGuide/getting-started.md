@@ -93,7 +93,43 @@ You can run a BigDL program, e.g., the [VGG](https://github.com/intel-analytics/
 
   * -f: The folder where your put the CIFAR-10 data set. Note in this example, this is just a local file folder on the Spark driver; as the CIFAR-10 data is somewhat small (about 120MB), we will directly send it from the driver to executors in the example.
 
-  * -b: The mini-batch size. The mini-batch size is expected to be a multiple of *total cores* used in the job. In this example, the mini-batch size is suggested to be set to *total cores * 4*
+  * -b: The mini-batch size. The mini-batch size is expected to be a multiple of *total cores* used in the job. In this example, the mini-batch size is suggested to be set to *total cores * 4*
+## Use log4j properity file to investigate issue using Debug log
+1.an example log4j properity file
+```
+# Root logger option
+log4j.rootLogger=INFO, stdout
+
+# Direct log messages to stdout
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.Target=System.out
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n
+
+log4j.logger.com.intel.analytics.bigdl.optim=DEBUG,myappender
+log4j.addivity.com.intel.analytics.bigdl.optim=false
+
+log4j.appender.myappender=org.apache.log4j.ConsoleAppender
+log4j.appender.myappender.Target=System.out
+log4j.appender.myappender.layout=org.apache.log4j.PatternLayout
+log4j.appender.myappender.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n
+```
+This file makes the classes in com.intel.analytics.bigdl.optim to output log on Debug level and the other classes on Info level.
+2.To make the properity file work you have to add the following argument in the command that you are going to input.
+```
+--conf "spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/xxx/xxx/..."
+```
+/xxx/xxx/... is the position where you put the properity file.
+For example you can view the Debug level log of ./models/lenet/Train.scala (Details of this file can be found here:https://github.com/intel-analytics/BigDL/tree/master/spark/dl/src/main/scala/com/intel/analytics/bigdl/models/lenet) in Spark local mode using the following command:
+```
+spark-submit --master local[core_number] \
+--driver-class-path dist/lib/bigdl-VERSION-jar-with-dependencies.jar \
+--class com.intel.analytics.bigdl.models.lenet.Train \
+--conf "spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/xxx/xxx/..." \
+dist/lib/bigdl-0.3.0-SNAPSHOT-jar-with-dependencies.jar \
+-f path_to_your_mnist_folder \
+
+```
 
 ## Next Steps
 * To learn the details of Python support in BigDL, you can check out the [Python Support Page][pythonsupport]
